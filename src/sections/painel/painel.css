@@ -1,0 +1,38 @@
+.painel_page {
+    background-color: #ded9d9;
+    padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 2rem;
+}
+
+.graph_container_painel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.titulo_bloco--escuro .h2_titulo { color: #ffffff; }
+.titulo_bloco--claro .h2_titulo { color: #1a1a1a; }
+
+/* Tablet */
+@media (max-width: 900px) {
+    .card_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .card_container {
+        grid-template-columns: 1fr;
+    }
+
+    .graph_container_painel {
+        grid-template-columns: 1fr;
+    }
+}
