@@ -1,6 +1,6 @@
 function CardMembros({ membro }) {
   return (
-    <div className="card-membros h-100">
+    <div className="card-membro h-100">
 
       <div className="text-center">
 
