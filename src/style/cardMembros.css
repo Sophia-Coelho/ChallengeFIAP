@@ -1,0 +1,31 @@
+.card-membro {
+  background: var(--bg-surface);
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  border: 1px solid #222;
+
+  transition: 0.3s;
+}
+
+.card-membro:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 30px rgba(226, 75, 74, 0.15);
+}
+
+.membro-img {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  margin-bottom: 1rem;
+}
