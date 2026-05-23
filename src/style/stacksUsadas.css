@@ -5,7 +5,11 @@
 
   gap: 16px;
 
-  justify-content: center;
+  justify-content: center;  
+}
+
+.stacks-section{
+  padding-bottom: 4rem;
 }
 
 .tech-description {
@@ -13,7 +17,8 @@
 
   max-width: 700px;
 
-  margin: 0 auto 40px auto;
+  margin: 0 auto 40px auto ;
+  margin-top: -22px;
 }
 
 .tech-badge {

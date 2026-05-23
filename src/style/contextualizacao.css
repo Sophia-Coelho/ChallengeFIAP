@@ -4,6 +4,7 @@
   color: var(--color-text);
 
   margin-top: 50px;
+  margin-bottom: -50px;
 }
 
 .contextualizacao h2 {

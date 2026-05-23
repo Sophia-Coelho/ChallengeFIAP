@@ -2,7 +2,7 @@
 
 function StacksUsadas() {
   return (
-    <section className="technologies-section py-5">
+    <section className="stacks-section">
 
       <div className="container">
 

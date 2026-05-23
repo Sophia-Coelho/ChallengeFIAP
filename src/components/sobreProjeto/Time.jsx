@@ -11,7 +11,7 @@ function Time() {
           Nossa Equipe
         </h2>
 
-        <div className="row g-4">
+        <div className="row g-4 justify-content-center">
 
           {timeData.map((membro, index) => (
             <div
