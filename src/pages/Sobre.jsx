@@ -3,7 +3,7 @@ import Time from "../components/sobreProjeto/Time"
 
 import "../style/sobre.css";
 import "../style/cardMembros.css";
-import "../style/StacksUsadas.css"
+import "../style/stacksUsadas.css"
 
 export default function Layout() {
     return (

@@ -1,3 +1,5 @@
+
+
 function StacksUsadas() {
   return (
     <section className="technologies-section py-5">
@@ -8,12 +10,18 @@ function StacksUsadas() {
           Tecnologias Utilizadas
         </h2>
 
+        <p className="text-center tech-description">
+          Tecnologias modernas utilizadas no desenvolvimento
+          da plataforma e aplicadas ao longo do curso.
+        </p>
+
         <div className="tech-grid">
 
           <div className="tech-badge">React</div>
           <div className="tech-badge">Bootstrap</div>
+          <div className="tech-badge">CSS</div>
           <div className="tech-badge">JavaScript</div>
-          <div className="tech-badge">Recharts</div>
+          <div className="tech-badge">Recharts (biblioteca JS)</div>
           <div className="tech-badge">LocalStorage</div>
 
         </div>
