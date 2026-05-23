@@ -12,7 +12,7 @@ function CardMembros({ membro }) {
 
         <h3>{membro.nome}</h3>
 
-        <span className="membro-role">
+        <span className="membro-descricao">
           {membro.titulo}
         </span>
 

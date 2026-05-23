@@ -4,7 +4,7 @@ const timeData = [
     titulo: "Pesquisa Científica",
     descricao:
       "Responsável pela pesquisa científica, validação médica e organização dos dados de saúde.",
-    img: "/images/jefferson.jpg"
+    img: "/Jefferson.png"
   },
 
   {
@@ -12,7 +12,23 @@ const timeData = [
     titulo: "Frontend UI/UX",
     descricao:
       "Responsável pela construção visual e experiência do usuário.",
-    img: "/images/natalia.jpg"
+    img: "/Nat.jpg"
+  },
+
+    {
+    nome: "Sophia",
+    titulo: "X",
+    descricao:
+      "Responsável pela o.",
+    img: "/Sophia.jpg"
+  },
+
+    {
+    nome: "Gabriel",
+    titulo: "F",
+    descricao:
+      "Responsável pela.",
+    img: "/Gabi.jpg"
   }
 ];
 
