@@ -10,10 +10,10 @@ function CardMembros({ membro }) {
           className="membro-img"
         />
 
-        <h3>{membro.name}</h3>
+        <h3>{membro.nome}</h3>
 
         <span className="membro-role">
-          {membro.role}
+          {membro.titulo}
         </span>
 
         <p>

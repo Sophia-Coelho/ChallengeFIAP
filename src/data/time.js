@@ -1,19 +1,19 @@
 const timeData = [
   {
-    name: "Jefferson Gomes",
-    role: "Pesquisa Científica",
-    description:
+    nome: "Jefferson Gomes",
+    titulo: "Pesquisa Científica",
+    descricao:
       "Responsável pela pesquisa científica, validação médica e organização dos dados de saúde.",
-    image: "/images/jefferson.jpg"
+    img: "/images/jefferson.jpg"
   },
 
   {
-    name: "Natalia",
-    role: "Frontend UI/UX",
-    description:
+    nome: "Natalia",
+    titulo: "Frontend UI/UX",
+    descricao:
       "Responsável pela construção visual e experiência do usuário.",
-    image: "/images/natalia.jpg"
+    img: "/images/natalia.jpg"
   }
 ];
 
-export default teamData;
+export default timeData;
