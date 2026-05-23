@@ -1,5 +1,7 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Outlet } from 'react-router-dom'
+import Layout from './components/Layout' 
 import Home from './pages/Home'
+import Sobre from './pages/Sobre'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import Navbar from './components/Navbar'
@@ -12,13 +14,17 @@ import DadosConta from './pages/DadosConta'
 export default function App() {
     return (
         <Routes>
-            <Route path="/" element={
+            <Route element={
                 <>
                     <Navbar />
-                    <Home />
+                    <Outlet /> 
                     <Footer />
                 </>
-            } />
+            }>
+                <Route path="/" element={<Home />} />
+                <Route path="/sobre" element={<Sobre />} />
+            </Route>
+
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/perfil" element={<Perfil />} />
