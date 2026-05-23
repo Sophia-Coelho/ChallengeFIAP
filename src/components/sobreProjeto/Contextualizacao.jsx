@@ -4,9 +4,9 @@ function Contextualizacao() {
 
       <div className="container">
 
-        <div className="row align-items-center">
+        <div className="row justify-content-center">
 
-          <div className="col-lg-6">
+          <div className="col-lg-8 text-center">
 
             <h2>Sobre o Projeto</h2>
 
@@ -16,14 +16,6 @@ function Contextualizacao() {
               anabolizantes através de visualizações interativas,
               dados científicos e análise de riscos à saúde.
             </p>
-
-          </div>
-
-          <div className="col-lg-6 text-center">
-
-            <div className="ilustracao">
-              ILUSTRAÇÃO
-            </div>
 
           </div>
 
