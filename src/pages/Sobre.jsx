@@ -2,7 +2,8 @@ import StacksUsadas from "../components/sobreProjeto/StacksUsadas"
 import Time from "../components/sobreProjeto/Time"
 
 import "../style/sobre.css";
-import "../style/CardMembros.css";
+import "../style/cardMembros.css";
+import "../style/StacksUsadas.css"
 
 export default function Layout() {
     return (
