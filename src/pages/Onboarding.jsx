@@ -15,10 +15,20 @@ const CONDICOES = [
 export default function Onboarding() {
     const navigate = useNavigate()
     const [etapa, setEtapa] = useState(1)
+
     const [form, setForm] = useState({
-        nome: '', sobrenome: '', idade: '', sexo: '', peso: '', altura: '',
-        cicloAtivo: 'sim', compostos: [], dosagem: '', tempoUso: '',
-        fezeExames: 'sim', condicoes: [],
+        nome: '',
+        sobrenome: '',
+        idade: '',
+        sexo: '',
+        peso: '',
+        altura: '',
+        cicloAtivo: 'sim',
+        compostos: [],
+        dosagem: '',
+        tempoUso: '',
+        fezeExames: 'recentes',
+        condicoes: [],
     })
 
     const update = (key, val) => setForm(p => ({ ...p, [key]: val }))
@@ -30,6 +40,32 @@ export default function Onboarding() {
                 ? p[key].filter(v => v !== val)
                 : [...p[key], val],
         }))
+    }
+
+    const finalizarOnboarding = () => {
+        const dadosFormatados = {
+            nome: form.nome,
+            sobrenome: form.sobrenome,
+            idade: form.idade,
+            sexo: form.sexo,
+            peso: form.peso,
+            altura: form.altura,
+            cicloAtivo: form.cicloAtivo,
+            compostos: form.compostos,
+            dosagem: form.dosagem,
+            tempoUso: form.tempoUso,
+            fezeExames: form.fezeExames,
+            condicoes: form.condicoes,
+            ultimaAtualizacao: new Date().toLocaleDateString('pt-BR', {
+                day: '2-digit',
+                month: 'long',
+                year: 'numeric',
+            }),
+        }
+
+        localStorage.setItem('dadosContaCicloRisco', JSON.stringify(dadosFormatados))
+
+        navigate('/perfil')
     }
 
     const progressos = { 1: '33%', 2: '66%', 3: '100%' }
@@ -88,46 +124,80 @@ export default function Onboarding() {
                         <div>
                             <div className="ob-tag">Etapa 1 de 3</div>
                             <h1 className="ob-title">Conta pra gente sobre você</h1>
-                            <p className="ob-sub">Essas informações ajudam a calibrar sua análise de risco com mais precisão.</p>
+                            <p className="ob-sub">
+                                Essas informações ajudam a calibrar sua análise de risco com mais precisão.
+                            </p>
 
                             <div className="ob-row">
                                 <div className="ob-field">
                                     <label>Nome</label>
-                                    <input type="text" placeholder="Seu nome" value={form.nome} onChange={e => update('nome', e.target.value)} />
+                                    <input
+                                        type="text"
+                                        placeholder="Seu nome"
+                                        value={form.nome}
+                                        onChange={e => update('nome', e.target.value)}
+                                    />
                                 </div>
                                 <div className="ob-field">
                                     <label>Sobrenome</label>
-                                    <input type="text" placeholder="Sobrenome" value={form.sobrenome} onChange={e => update('sobrenome', e.target.value)} />
+                                    <input
+                                        type="text"
+                                        placeholder="Sobrenome"
+                                        value={form.sobrenome}
+                                        onChange={e => update('sobrenome', e.target.value)}
+                                    />
                                 </div>
                             </div>
+
                             <div className="ob-row">
                                 <div className="ob-field">
                                     <label>Idade</label>
-                                    <input type="number" placeholder="28" value={form.idade} onChange={e => update('idade', e.target.value)} />
+                                    <input
+                                        type="number"
+                                        placeholder="28"
+                                        value={form.idade}
+                                        onChange={e => update('idade', e.target.value)}
+                                    />
                                 </div>
                                 <div className="ob-field">
                                     <label>Sexo biológico</label>
-                                    <select value={form.sexo} onChange={e => update('sexo', e.target.value)}>
+                                    <select
+                                        value={form.sexo}
+                                        onChange={e => update('sexo', e.target.value)}
+                                    >
                                         <option value="">Selecionar</option>
-                                        <option>Masculino</option>
-                                        <option>Feminino</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
                                     </select>
                                 </div>
                             </div>
+
                             <div className="ob-row">
                                 <div className="ob-field">
                                     <label>Peso (kg)</label>
-                                    <input type="number" placeholder="85" value={form.peso} onChange={e => update('peso', e.target.value)} />
+                                    <input
+                                        type="number"
+                                        placeholder="85"
+                                        value={form.peso}
+                                        onChange={e => update('peso', e.target.value)}
+                                    />
                                 </div>
                                 <div className="ob-field">
                                     <label>Altura (cm)</label>
-                                    <input type="number" placeholder="178" value={form.altura} onChange={e => update('altura', e.target.value)} />
+                                    <input
+                                        type="number"
+                                        placeholder="178"
+                                        value={form.altura}
+                                        onChange={e => update('altura', e.target.value)}
+                                    />
                                 </div>
                             </div>
 
                             <div className="ob-btn-row">
                                 <span />
-                                <button className="ob-btn-next" onClick={() => setEtapa(2)}>Continuar →</button>
+                                <button className="ob-btn-next" onClick={() => setEtapa(2)}>
+                                    Continuar →
+                                </button>
                             </div>
                         </div>
                     )}
@@ -137,7 +207,9 @@ export default function Onboarding() {
                         <div>
                             <div className="ob-tag">Etapa 2 de 3</div>
                             <h1 className="ob-title">Uso atual de esteroides</h1>
-                            <p className="ob-sub">Informações sobre seu ciclo atual ou mais recente.</p>
+                            <p className="ob-sub">
+                                Informações sobre seu ciclo atual ou mais recente.
+                            </p>
 
                             <div className="ob-field">
                                 <label>Está em ciclo atualmente?</label>
@@ -161,41 +233,57 @@ export default function Onboarding() {
                                 </div>
                             </div>
 
-                            <div className="ob-field">
-                                <label>Compostos utilizados</label>
-                                <div className="ob-tags">
-                                    {COMPOSTOS.map(c => (
-                                        <div
-                                            key={c}
-                                            className={`ob-tag-item ${form.compostos.includes(c) ? 'selected' : ''}`}
-                                            onClick={() => toggleArray('compostos', c)}
-                                        >
-                                            {c}
+                            {form.cicloAtivo !== 'nunca' && (
+                                <>
+                                    <div className="ob-field">
+                                        <label>Compostos utilizados</label>
+                                        <div className="ob-tags">
+                                            {COMPOSTOS.map(c => (
+                                                <div
+                                                    key={c}
+                                                    className={`ob-tag-item ${form.compostos.includes(c) ? 'selected' : ''}`}
+                                                    onClick={() => toggleArray('compostos', c)}
+                                                >
+                                                    {c}
+                                                </div>
+                                            ))}
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
+                                    </div>
 
-                            <div className="ob-row">
-                                <div className="ob-field">
-                                    <label>Dosagem semanal (mg)</label>
-                                    <input type="number" placeholder="500" value={form.dosagem} onChange={e => update('dosagem', e.target.value)} />
-                                </div>
-                                <div className="ob-field">
-                                    <label>Tempo de uso</label>
-                                    <select value={form.tempoUso} onChange={e => update('tempoUso', e.target.value)}>
-                                        <option value="">Selecionar</option>
-                                        <option>Menos de 3 meses</option>
-                                        <option>3–6 meses</option>
-                                        <option>6–12 meses</option>
-                                        <option>Mais de 12 meses</option>
-                                    </select>
-                                </div>
-                            </div>
+                                    <div className="ob-row">
+                                        <div className="ob-field">
+                                            <label>Dosagem semanal (mg)</label>
+                                            <input
+                                                type="number"
+                                                placeholder="500"
+                                                value={form.dosagem}
+                                                onChange={e => update('dosagem', e.target.value)}
+                                            />
+                                        </div>
+                                        <div className="ob-field">
+                                            <label>Tempo de uso</label>
+                                            <select
+                                                value={form.tempoUso}
+                                                onChange={e => update('tempoUso', e.target.value)}
+                                            >
+                                                <option value="">Selecionar</option>
+                                                <option>Menos de 3 meses</option>
+                                                <option>3–6 meses</option>
+                                                <option>6–12 meses</option>
+                                                <option>Mais de 12 meses</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
 
                             <div className="ob-btn-row">
-                                <button className="ob-btn-back" onClick={() => setEtapa(1)}>← Voltar</button>
-                                <button className="ob-btn-next" onClick={() => setEtapa(3)}>Continuar →</button>
+                                <button className="ob-btn-back" onClick={() => setEtapa(1)}>
+                                    ← Voltar
+                                </button>
+                                <button className="ob-btn-next" onClick={() => setEtapa(3)}>
+                                    Continuar →
+                                </button>
                             </div>
                         </div>
                     )}
@@ -205,7 +293,9 @@ export default function Onboarding() {
                         <div>
                             <div className="ob-tag">Etapa 3 de 3</div>
                             <h1 className="ob-title">Histórico de saúde</h1>
-                            <p className="ob-sub">Isso nos ajuda a identificar riscos pré-existentes e personalizar seus alertas.</p>
+                            <p className="ob-sub">
+                                Isso nos ajuda a identificar riscos pré-existentes e personalizar seus alertas.
+                            </p>
 
                             <div className="ob-field">
                                 <label>Já fez exames laboratoriais?</label>
@@ -248,8 +338,10 @@ export default function Onboarding() {
                             </div>
 
                             <div className="ob-btn-row">
-                                <button className="ob-btn-back" onClick={() => setEtapa(2)}>← Voltar</button>
-                                <button className="ob-btn-next" onClick={() => navigate('/perfil')}>
+                                <button className="ob-btn-back" onClick={() => setEtapa(2)}>
+                                    ← Voltar
+                                </button>
+                                <button className="ob-btn-next" onClick={finalizarOnboarding}>
                                     Acessar dashboard →
                                 </button>
                             </div>
