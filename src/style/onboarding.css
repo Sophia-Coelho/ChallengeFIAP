@@ -425,3 +425,16 @@
     border-radius: 14px;
     padding: 10px;
 }
+
+.ob-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.ob-logo-img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}

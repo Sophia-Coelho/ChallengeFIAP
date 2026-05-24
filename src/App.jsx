@@ -8,7 +8,6 @@ import Login from './pages/Login'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Perfil from './pages/Perfil'
-import Onboarding from './pages/Onboarding'
 import HistoricoExames from './components/HistoricoExames'
 import DadosConta from './pages/DadosConta'
 
@@ -33,7 +32,6 @@ export default function App() {
                 </Route>
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Perfil />} />
-                <Route path="/onboarding" element={<Onboarding />} />
                 <Route path="/conta" element={<DadosConta />} />
             </Routes>
 
