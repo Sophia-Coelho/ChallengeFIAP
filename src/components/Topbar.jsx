@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import "../../style/navbar.css"
-import logoIcon from '../../assets/favicon.png'
-import logoExit from '../../assets/exit.png'
+import "../style/navbar.css"
+import logoIcon from '../assets/favicon.png'
+import logoExit from '../assets/exit.png'
 
 export default function Topbar() {
 
@@ -13,18 +13,6 @@ export default function Topbar() {
             </div>
 
             <div className="nav-right">
-                <Link to="/perfil" className="nav-item">
-                    Visão geral
-                </Link>
-
-                <Link to="/historico" className="nav-item">
-                    Histórico de Exames
-                </Link>
-
-                <Link to="/conta" className="nav-item">
-                    Dados da conta
-                </Link>
-
                 <Link className="topbar-exit-link" to="/#">
                     <span>Sair</span>
                     <img className="exit-icon" src={logoExit} alt="Sair" className="exit-icon" />

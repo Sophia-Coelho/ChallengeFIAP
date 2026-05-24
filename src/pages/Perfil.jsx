@@ -1,10 +1,10 @@
-// import { useState } from 'react'
-import Topbar from '../components/perfilDoUsuario/Topbar'
+import Topbar from '../components/Topbar'
 import CardMetrica from '../components/perfilDoUsuario/CardMetrica'
 import CardChart from '../components/perfilDoUsuario/CardChart'
 import CardAlertasExamesInsights from '../components/perfilDoUsuario/CardAlertasExamesInsights'
 import { MOCK_DATA } from '../data/mockData'
 import '../style/perfil.css'
+import HistoricoExames from '../components/HistoricoExames'
 
 export default function Perfil() {
     const { perfil, metricas, alertas } = MOCK_DATA
@@ -39,6 +39,9 @@ export default function Perfil() {
                     </div>
                 </div>
             </div>
+            <HistoricoExames />
         </div>
+
+
     )
 }

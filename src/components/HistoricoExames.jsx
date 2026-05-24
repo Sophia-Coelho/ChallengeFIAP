@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react'
-import Topbar from '../components/perfilDoUsuario/Topbar'
 import '../style/historicoExames.css'
 
 /* ─── Mock data ─── */
@@ -147,8 +146,6 @@ export default function HistoricoExames() {
 
     return (
         <div className="he-wrap">
-
-            <Topbar />
 
             {/* Page */}
             <div className="he-page">
