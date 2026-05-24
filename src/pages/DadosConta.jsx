@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import '../style/dadosDaConta.css'
-import Topbar from '../components/Topbar'
 
 const COMPOSTOS = [
     'Testosterona Enantato', 'Testosterona Cipionato', 'Trembolona',
