@@ -13,8 +13,8 @@ export default function Navbar() {
                     <img src={logoIcon} alt="Logo" className="logo-icon" />
                 </a>
                 <ul className="menu_list">
-                    <li><a href="#painel">Menu</a></li>
-                    <li><a href="#sobre-pagina">Sobre o Projeto</a></li>
+                    <li><a href="/">Menu</a></li>
+                    <li><a href="/sobre">Sobre o Projeto</a></li>
                     <li><Link className="btn-login" to="/login">Login</Link></li>
                 </ul>
                 <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -22,8 +22,8 @@ export default function Navbar() {
                 </div>
             </nav>
             <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-                <a href="#painel">Menu</a>
-                <a href="#sobre-pagina">Sobre o Projeto</a>
+                <a href="/">Menu</a>
+                <a href="/sobre">Sobre o Projeto</a>
                 <a className="btn-login" href="/login">Login</a>
             </div>
         </>

@@ -40,6 +40,8 @@
     align-items: center;
     gap: 4px;
     list-style: none;
+    padding: 0px;
+    margin: 0px
 }
 
 .menu_list li a {

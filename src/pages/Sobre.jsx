@@ -7,7 +7,7 @@ import "../style/cardMembros.css";
 import "../style/stacksUsadas.css"
 import "../style/contextualizacao.css"
 
-export default function Layout() {
+export default function Sobre() {
     return (
         <div className="sobre-pagina">
 

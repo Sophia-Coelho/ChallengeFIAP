@@ -11,7 +11,7 @@ function Contextualizacao() {
             <h2>Sobre o Projeto</h2>
 
             <p>
-              O Ciclo de Risco foi desenvolvido com o objetivo de
+              O Juicer foi desenvolvido com o objetivo de
               conscientizar sobre os impactos do uso de esteroides
               anabolizantes através de visualizações interativas,
               dados científicos e análise de riscos à saúde.
