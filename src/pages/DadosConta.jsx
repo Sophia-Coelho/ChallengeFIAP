@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import Topbar from '../components/Topbar'
 import '../style/dadosDaConta.css'
-import Topbar from '../components/perfilDoUsuario/Topbar'
 
 const COMPOSTOS = [
     'Testosterona Enantato', 'Testosterona Cipionato', 'Trembolona',
@@ -31,16 +31,9 @@ const INITIAL = {
 
 function carregarDadosConta() {
     const dados = localStorage.getItem('dadosContaCicloRisco')
-
-    if (!dados) {
-        return INITIAL
-    }
-
+    if (!dados) return INITIAL
     try {
-        return {
-            ...INITIAL,
-            ...JSON.parse(dados),
-        }
+        return { ...INITIAL, ...JSON.parse(dados) }
     } catch {
         return INITIAL
     }
@@ -58,7 +51,6 @@ function RadioGroup({ options, value, onChange }) {
         <div className="dc-radio-group">
             {options.map(o => {
                 const sel = value === o.val
-
                 return (
                     <div
                         key={o.val}
@@ -79,7 +71,6 @@ function RadioGroup({ options, value, onChange }) {
 function TagPicker({ options, value, onChange }) {
     const toggle = v =>
         onChange(value.includes(v) ? value.filter(x => x !== v) : [...value, v])
-
     return (
         <>
             <div className="dc-tags">
@@ -93,7 +84,6 @@ function TagPicker({ options, value, onChange }) {
                     </div>
                 ))}
             </div>
-
             <div className="dc-tag-count">
                 {value.length === 0
                     ? 'Nenhum composto selecionado'
@@ -106,12 +96,10 @@ function TagPicker({ options, value, onChange }) {
 function CheckGroup({ options, value, onChange }) {
     const toggle = v =>
         onChange(value.includes(v) ? value.filter(x => x !== v) : [...value, v])
-
     return (
         <div className="dc-check-group">
             {options.map(c => {
                 const sel = value.includes(c)
-
                 return (
                     <div
                         key={c}
@@ -136,7 +124,7 @@ function Toast({ msg, show, warn }) {
     )
 }
 
-export default function DadosDaConta() {
+export default function DadosDaConta({ embedded = false }) {
     const dadosIniciais = carregarDadosConta()
 
     const [form, setForm] = useState(dadosIniciais)
@@ -146,38 +134,26 @@ export default function DadosDaConta() {
 
     const dirty = JSON.stringify(form) !== JSON.stringify(saved)
 
-    const update = (key, val) => {
-        setForm(p => ({ ...p, [key]: val }))
-    }
+    const update = (key, val) => setForm(p => ({ ...p, [key]: val }))
 
     const showToast = (msg, warn = false) => {
         setToast({ show: true, msg, warn })
-
-        setTimeout(() => {
-            setToast(t => ({ ...t, show: false }))
-        }, 3200)
+        setTimeout(() => setToast(t => ({ ...t, show: false })), 3200)
     }
 
     const handleSave = async () => {
         setSaving(true)
-
         await new Promise(r => setTimeout(r, 900))
-
         const dadosAtualizados = {
             ...form,
             ultimaAtualizacao: new Date().toLocaleDateString('pt-BR', {
-                day: '2-digit',
-                month: 'long',
-                year: 'numeric',
+                day: '2-digit', month: 'long', year: 'numeric',
             }),
         }
-
         localStorage.setItem('dadosContaCicloRisco', JSON.stringify(dadosAtualizados))
-
         setForm(dadosAtualizados)
         setSaved(dadosAtualizados)
         setSaving(false)
-
         showToast('Dados atualizados com sucesso')
     }
 
@@ -196,31 +172,33 @@ export default function DadosDaConta() {
     const statusCiclo = formatarStatusCiclo(form.cicloAtivo)
 
     return (
-        <div className="dc-wrap">
+        <div className={`dc-wrap${embedded ? ' dc-wrap--embedded' : ''}`}>
 
-            <Topbar />
+            {!embedded && <Topbar />}
 
             <div className="dc-page">
 
-                <div className="dc-header">
-                    <div className="dc-header-info">
-                        <h1>
-                            {nomeCompleto}
-                            {dirty && <span className="dc-dirty-badge">● Alterações não salvas</span>}
-                        </h1>
-
-                        <p>
-                            {form.idade ? `${form.idade} anos` : 'Idade não informada'}
-                            {form.peso && ` · ${form.peso} kg`}
-                            {form.altura && ` · ${form.altura} cm`}
-                            {statusCiclo && ` · ${statusCiclo}`}
-                        </p>
+                {!embedded && (
+                    <div className="dc-header">
+                        <div className="dc-header-info">
+                            <h1>
+                                {nomeCompleto}
+                                {dirty && <span className="dc-dirty-badge">● Alterações não salvas</span>}
+                            </h1>
+                            <p>
+                                {form.idade ? `${form.idade} anos` : 'Idade não informada'}
+                                {form.peso && ` · ${form.peso} kg`}
+                                {form.altura && ` · ${form.altura} cm`}
+                                {statusCiclo && ` · ${statusCiclo}`}
+                            </p>
+                        </div>
                     </div>
-                </div>
+                )}
 
                 <div className="dc-grid">
 
-                    <div className="dc-section dc-section--accent">
+                    {/* Perfil básico — 2 colunas × 2 linhas */}
+                    <div className="dc-section dc-section--accent dc-section--perfil">
                         <div className="dc-section-title">
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#c0392b" strokeWidth="1.4">
                                 <circle cx="8" cy="5.5" r="3" />
@@ -228,73 +206,40 @@ export default function DadosDaConta() {
                             </svg>
                             Perfil básico
                         </div>
-
                         <div className="dc-row2">
                             <div className="dc-field">
                                 <label>Nome</label>
-                                <input
-                                    type="text"
-                                    value={form.nome}
-                                    placeholder="Seu nome"
-                                    onChange={e => update('nome', e.target.value)}
-                                />
+                                <input type="text" value={form.nome} placeholder="Seu nome" onChange={e => update('nome', e.target.value)} />
                             </div>
-
                             <div className="dc-field">
                                 <label>Sobrenome</label>
-                                <input
-                                    type="text"
-                                    value={form.sobrenome}
-                                    placeholder="Sobrenome"
-                                    onChange={e => update('sobrenome', e.target.value)}
-                                />
+                                <input type="text" value={form.sobrenome} placeholder="Sobrenome" onChange={e => update('sobrenome', e.target.value)} />
                             </div>
-
                             <div className="dc-field">
                                 <label>Idade</label>
-                                <input
-                                    type="number"
-                                    value={form.idade}
-                                    placeholder="28"
-                                    onChange={e => update('idade', e.target.value)}
-                                />
+                                <input type="number" value={form.idade} placeholder="28" onChange={e => update('idade', e.target.value)} />
                             </div>
-
                             <div className="dc-field">
                                 <label>Sexo biológico</label>
-                                <select
-                                    value={form.sexo}
-                                    onChange={e => update('sexo', e.target.value)}
-                                >
+                                <select value={form.sexo} onChange={e => update('sexo', e.target.value)}>
                                     <option value="">Selecionar</option>
                                     <option value="Masculino">Masculino</option>
                                     <option value="Feminino">Feminino</option>
                                 </select>
                             </div>
-
                             <div className="dc-field">
                                 <label>Peso (kg)</label>
-                                <input
-                                    type="number"
-                                    value={form.peso}
-                                    placeholder="85"
-                                    onChange={e => update('peso', e.target.value)}
-                                />
+                                <input type="number" value={form.peso} placeholder="85" onChange={e => update('peso', e.target.value)} />
                             </div>
-
                             <div className="dc-field">
                                 <label>Altura (cm)</label>
-                                <input
-                                    type="number"
-                                    value={form.altura}
-                                    placeholder="178"
-                                    onChange={e => update('altura', e.target.value)}
-                                />
+                                <input type="number" value={form.altura} placeholder="178" onChange={e => update('altura', e.target.value)} />
                             </div>
                         </div>
                     </div>
 
-                    <div className="dc-section">
+                    {/* Ciclo atual — 2 colunas */}
+                    <div className="dc-section dc-section--ciclo">
                         <div className="dc-section-title">
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#c0392b" strokeWidth="1.4">
                                 <circle cx="8" cy="8" r="6" />
@@ -302,7 +247,6 @@ export default function DadosDaConta() {
                             </svg>
                             Ciclo atual
                         </div>
-
                         <div className="dc-field">
                             <label>Status do ciclo</label>
                             <RadioGroup
@@ -315,25 +259,15 @@ export default function DadosDaConta() {
                                 ]}
                             />
                         </div>
-
                         {form.cicloAtivo !== 'nunca' && (
                             <div className="dc-row2">
                                 <div className="dc-field">
                                     <label>Dosagem semanal (mg)</label>
-                                    <input
-                                        type="number"
-                                        value={form.dosagem}
-                                        placeholder="500"
-                                        onChange={e => update('dosagem', e.target.value)}
-                                    />
+                                    <input type="number" value={form.dosagem} placeholder="500" onChange={e => update('dosagem', e.target.value)} />
                                 </div>
-
                                 <div className="dc-field">
                                     <label>Tempo de uso</label>
-                                    <select
-                                        value={form.tempoUso}
-                                        onChange={e => update('tempoUso', e.target.value)}
-                                    >
+                                    <select value={form.tempoUso} onChange={e => update('tempoUso', e.target.value)}>
                                         <option value="">Selecionar</option>
                                         <option>Menos de 3 meses</option>
                                         <option>3–6 meses</option>
@@ -345,7 +279,8 @@ export default function DadosDaConta() {
                         )}
                     </div>
 
-                    <div className="dc-section dc-full">
+                    {/* Compostos — linha inteira */}
+                    <div className="dc-section dc-section--compostos">
                         <div className="dc-section-title">
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#c0392b" strokeWidth="1.4">
                                 <path d="M6 2v4L3 12h10L10 6V2" />
@@ -353,15 +288,11 @@ export default function DadosDaConta() {
                             </svg>
                             Compostos utilizados
                         </div>
-
-                        <TagPicker
-                            options={COMPOSTOS}
-                            value={form.compostos}
-                            onChange={v => update('compostos', v)}
-                        />
+                        <TagPicker options={COMPOSTOS} value={form.compostos} onChange={v => update('compostos', v)} />
                     </div>
 
-                    <div className="dc-section">
+                    {/* Exames — 2 colunas */}
+                    <div className="dc-section dc-section--exames">
                         <div className="dc-section-title">
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#c0392b" strokeWidth="1.4">
                                 <path d="M4 2h8a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1z" />
@@ -369,7 +300,6 @@ export default function DadosDaConta() {
                             </svg>
                             Exames laboratoriais
                         </div>
-
                         <div className="dc-field">
                             <label>Já realizou exames?</label>
                             <RadioGroup
@@ -395,7 +325,8 @@ export default function DadosDaConta() {
                         )}
                     </div>
 
-                    <div className="dc-section">
+                    {/* Condições pré-existentes — 2 colunas */}
+                    <div className="dc-section dc-section--condicoes">
                         <div className="dc-section-title">
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#c0392b" strokeWidth="1.4">
                                 <circle cx="8" cy="8" r="6" />
@@ -403,32 +334,22 @@ export default function DadosDaConta() {
                             </svg>
                             Condições pré-existentes
                         </div>
-
-                        <CheckGroup
-                            options={CONDICOES}
-                            value={form.condicoes}
-                            onChange={v => update('condicoes', v)}
-                        />
+                        <CheckGroup options={CONDICOES} value={form.condicoes} onChange={v => update('condicoes', v)} />
                     </div>
 
+                    {/* Save bar — linha inteira */}
                     <div className="dc-save-bar dc-full">
                         <div className="dc-save-info">
                             Última atualização:{' '}
                             <span>{form.ultimaAtualizacao || 'Ainda não atualizado'}</span>
                         </div>
-
                         <div className="dc-save-actions">
                             {dirty && (
                                 <button className="dc-btn-discard" onClick={handleDiscard}>
                                     Descartar
                                 </button>
                             )}
-
-                            <button
-                                className={saveBtnClass}
-                                onClick={handleSave}
-                                disabled={!dirty || saving}
-                            >
+                            <button className={saveBtnClass} onClick={handleSave} disabled={!dirty || saving}>
                                 {saving ? 'Salvando…' : 'Salvar alterações'}
                             </button>
                         </div>

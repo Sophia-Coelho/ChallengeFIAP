@@ -1,4 +1,3 @@
-
 .sim-wrapper {
   background-color: #0f0f0f;
   min-height: 100vh;
@@ -7,12 +6,13 @@
 /* ── Card principal ─ */
 .sim-card {
   background-color: #1a1a1a;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #ded9d9;
   border-radius: 16px;
 }
 
 .sim-range {
-  accent-color: #dc3545; /* variável semântica do Bootstrap: --bs-danger */
+  accent-color: #dc3545;
+  /* variável semântica do Bootstrap: --bs-danger */
 }
 
 .sim-ticks {
@@ -78,18 +78,34 @@
   flex-shrink: 0;
 }
 
-.sim-msg__dot--danger  { background-color: #dc2626; }
-.sim-msg__dot--warning { background-color: #eab308; }
-.sim-msg__dot--info    { background-color: #3b82f6; }
+.sim-msg__dot--danger {
+  background-color: #dc2626;
+}
+
+.sim-msg__dot--warning {
+  background-color: #eab308;
+}
+
+.sim-msg__dot--info {
+  background-color: #3b82f6;
+}
 
 /* Títulos */
 .sim-msg__title {
   font-size: 0.82rem;
 }
 
-.sim-msg__title--danger  { color: #ef4444; }
-.sim-msg__title--warning { color: #eab308; }
-.sim-msg__title--info    { color: #60a5fa; }
+.sim-msg__title--danger {
+  color: #ef4444;
+}
+
+.sim-msg__title--warning {
+  color: #eab308;
+}
+
+.sim-msg__title--info {
+  color: #60a5fa;
+}
 
 /* Texto descritivo */
 .sim-msg__text {

@@ -1,66 +1,15 @@
-/* ─── HistoricoExames.css ─── */
-
 .he-wrap {
-    background: #080808;
     min-height: 100vh;
-    font-family: 'DM Sans', system-ui, sans-serif;
-    color: #e2e2e2;
-}
-
-/* TOP BAR */
-.he-topbar {
-    border-bottom: 1px solid #111;
-    padding: 14px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #0a0a0a;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.he-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.he-logo-mark {
-    width: 22px;
-    height: 22px;
-    border-radius: 6px;
-    background: #c0392b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.he-logo-mark svg {
-    width: 12px;
-    height: 12px;
-}
-
-.he-logo-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: #fff;
-}
-
-.he-topbar-right {
-    font-size: 12px;
-    color: #ded9d9;
-}
-
-.he-topbar-right strong {
-    color: #888;
 }
 
 /* PAGE */
 .he-page {
-    max-width: 860px;
+    max-width: 1850px;
     margin: 0 auto;
-    padding: 32px 32px 80px;
+    padding: 32px 32px 0px;
+    background-color: #111;
+    border: 1px solid #161616;
+    border-radius: 10px
 }
 
 /* PAGE HEADER */
@@ -112,9 +61,19 @@
     letter-spacing: -.5px;
 }
 
-.he-stat-val--red   { color: #c0392b; }
-.he-stat-val--green { color: #27ae60; }
-.he-stat-val--muted { color: #e2e2e2; font-size: 15px; margin-top: 4px; }
+.he-stat-val--red {
+    color: #c0392b;
+}
+
+.he-stat-val--green {
+    color: #27ae60;
+}
+
+.he-stat-val--muted {
+    color: #e2e2e2;
+    font-size: 15px;
+    margin-top: 4px;
+}
 
 .he-stat-sub {
     font-size: 13px;
@@ -165,7 +124,7 @@
 
 .he-upload-sub {
     font-size: 12px;
-    color: #2a2a2a;
+    color: #ded9d9;
     margin-bottom: 14px;
 }
 
@@ -199,7 +158,7 @@
 .he-exam-empty {
     text-align: center;
     padding: 40px 0;
-    color: #2a2a2a;
+    color: #ded9d9;
     font-size: 16px;
 }
 
@@ -217,7 +176,7 @@
 }
 
 .he-exam-card:hover {
-    border-color: #2a2a2a;
+    border-color: #ded9d9;
 }
 
 /* PDF ICON */
@@ -247,7 +206,7 @@
 
 .he-exam-meta {
     font-size: 11px;
-    color: #2e2e2e;
+    color: #ded9d9;
 }
 
 /* EXAM BADGES */
@@ -266,18 +225,43 @@
     border: 1px solid transparent;
 }
 
-.he-badge--high       { background: #1a0808; border-color: #2a0f0f; color: #c0392b; }
-.he-badge--warn       { background: #1a160a; border-color: #2a1e0f; color: #e67e22; }
-.he-badge--normal     { background: #0a1a0a; border-color: #0f2a0f; color: #27ae60; }
-.he-badge--processing { background: #141414; border-color: #1e1e1e; color: #4a4a4a; }
-.he-badge--pdf        { background: #141414; border-color: #1e1e1e; color: #4a4a4a; font-weight: 500; }
+.he-badge--high {
+    background: #1a0808;
+    border-color: #2a0f0f;
+    color: #c0392b;
+}
+
+.he-badge--warn {
+    background: #1a160a;
+    border-color: #2a1e0f;
+    color: #e67e22;
+}
+
+.he-badge--normal {
+    background: #0a1a0a;
+    border-color: #0f2a0f;
+    color: #27ae60;
+}
+
+.he-badge--processing {
+    background: #141414;
+    border-color: #1e1e1e;
+    color: #4a4a4a;
+}
+
+.he-badge--pdf {
+    background: #141414;
+    border-color: #1e1e1e;
+    color: #4a4a4a;
+    font-weight: 500;
+}
 
 /* REMOVE BUTTON */
 .he-btn-remove {
     background: none;
     border: none;
     cursor: pointer;
-    color: #2a2a2a;
+    color: #ded9d9;
     font-size: 14px;
     line-height: 1;
     padding: 2px 4px;
@@ -297,7 +281,7 @@
     right: 28px;
     z-index: 999;
     background: #161616;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #ded9d9;
     border-radius: 9px;
     padding: 11px 18px;
     display: flex;

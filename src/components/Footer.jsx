@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="footer_brand">
                     <div className="footer_logo">
                         <span className="footer_logo_dot" />
-                        <span className="footer_logo_text">Ciclo de Risco</span>
+                        <span className="footer_logo_text">Juicers</span>
                     </div>
                     <p className="footer_tagline">
                         Dados reais sobre o impacto dos esteroides anabolizantes no seu corpo.
@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
 
             <div className="footer_bottom">
-                <p>© {new Date().getFullYear()} Ciclo de Risco. Todos os direitos reservados.</p>
+                <p>© {new Date().getFullYear()} Juicers. Todos os direitos reservados.</p>
                 <p className="footer_disclaimer">
                     Este site é informativo e não substitui orientação médica profissional.
                 </p>

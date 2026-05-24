@@ -5,63 +5,12 @@
     min-height: 100vh;
     font-family: 'DM Sans', system-ui, sans-serif;
     color: #e2e2e2;
-    
 }
 
-/* TOP BAR */
-.dc-topbar {
-    border-bottom: 1px solid #111;
-    padding: 14px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #0a0a0a;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.dc-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.dc-logo-mark {
-    width: 22px;
-    height: 22px;
-    border-radius: 6px;
-    background: #c0392b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dc-logo-mark svg {
-    width: 12px;
-    height: 12px;
-}
-
-.dc-logo-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: #fff;
-}
-
-.dc-topbar-right {
-    font-size: 12px;
-    color: #ded9d9;
-}
-
-.dc-topbar-right strong {
-    color: #888;
-}
-
-/* PAGE */
 .dc-page {
-    max-width: 940px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 32px 32px 80px;
+    padding: 24px 24px 60px;
 }
 
 /* PAGE HEADER */
@@ -69,27 +18,11 @@
     display: flex;
     align-items: flex-start;
     gap: 18px;
-    margin-bottom: 28px;
-}
-
-.dc-avatar {
-    width: 54px;
-    height: 54px;
-    border-radius: 13px;
-    background: #1a0808;
-    border: 1.5px solid #2a0f0f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17px;
-    font-weight: 700;
-    color: #c0392b;
-    flex-shrink: 0;
-    letter-spacing: 1px;
+    margin-bottom: 24px;
 }
 
 .dc-header-info h1 {
-    font-size: 35px;
+    font-size: 28px;
     font-weight: 600;
     color: #fff;
     letter-spacing: -.3px;
@@ -102,7 +35,7 @@
 
 .dc-header-info p {
     font-size: 12px;
-    color: #ded9d9;
+    color: #888;
 }
 
 /* DIRTY BADGE */
@@ -119,13 +52,41 @@
     font-weight: 600;
 }
 
-/* GRID */
+/* GRID — 4 colunas no desktop, colapsa progressivamente */
 .dc-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 12px;
+    align-items: start;
 }
 
+/* Perfil básico ocupa 2 colunas, 2 linhas */
+.dc-section--perfil {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Ciclo atual: 2 colunas */
+.dc-section--ciclo {
+    grid-column: span 2;
+}
+
+/* Compostos: linha inteira */
+.dc-section--compostos {
+    grid-column: 1 / -1;
+}
+
+/* Exames e condições: 2 colunas cada */
+.dc-section--exames {
+    grid-column: span 2;
+}
+
+.dc-section--condicoes {
+    grid-column: span 2;
+}
+
+/* Save bar: linha inteira */
 .dc-full {
     grid-column: 1 / -1;
 }
@@ -135,19 +96,17 @@
     background: #0f0f0f;
     border: 1px solid #1a1a1a;
     border-radius: 10px;
-    padding: 18px 20px;
-}
-
-.dc-section--accent {
-    border-top: 2px solid #c0392b;
+    padding: 16px 18px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .dc-section-title {
     display: flex;
     align-items: center;
     gap: 7px;
-    margin-bottom: 16px;
-    font-size: 16px;
+    margin-bottom: 14px;
+    font-size: 11px;
     color: #c0392b;
     text-transform: uppercase;
     letter-spacing: .1em;
@@ -156,7 +115,7 @@
 
 /* FIELD */
 .dc-field {
-    margin-bottom: 13px;
+    margin-bottom: 11px;
 }
 
 .dc-field:last-child {
@@ -165,12 +124,12 @@
 
 .dc-field label {
     display: block;
-    font-size: 13px;
-    color: #ded9d9;
+    font-size: 11px;
+    color: #666;
     text-transform: uppercase;
     letter-spacing: .07em;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .dc-field input,
@@ -179,7 +138,7 @@
     background: #111;
     border: 1px solid #1e1e1e;
     border-radius: 7px;
-    padding: 9px 12px;
+    padding: 8px 11px;
     font-size: 13px;
     color: #e2e2e2;
     outline: none;
@@ -195,27 +154,27 @@
 }
 
 .dc-field input::placeholder {
-    color: #2e2e2e;
+    color: #333;
 }
 
 .dc-row2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 11px;
+    gap: 10px;
 }
 
 /* RADIO */
 .dc-radio-group {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
 }
 
 .dc-radio-opt {
     display: flex;
     align-items: center;
     gap: 9px;
-    padding: 8px 12px;
+    padding: 7px 11px;
     border: 1px solid #1e1e1e;
     border-radius: 7px;
     cursor: pointer;
@@ -223,7 +182,7 @@
 }
 
 .dc-radio-opt:hover {
-    border-color: #2e2e2e;
+    border-color: #333;
 }
 
 .dc-radio-opt--sel {
@@ -235,7 +194,7 @@
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    border: 1.5px solid #2a2a2a;
+    border: 1.5px solid #333;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,8 +214,8 @@
 }
 
 .dc-radio-text {
-    font-size: 14px;
-    color: #4a4a4a;
+    font-size: 13px;
+    color: #555;
 }
 
 .dc-radio-opt--sel .dc-radio-text {
@@ -267,22 +226,23 @@
 .dc-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 6px;
 }
 
 .dc-tag {
-    padding: 5px 11px;
+    padding: 4px 10px;
     border-radius: 5px;
     border: 1px solid #1e1e1e;
     background: #111;
-    color: #3a3a3a;
-    font-size: 14px;
+    color: #666;
+    font-size: 12px;
     cursor: pointer;
     transition: all .15s;
 }
 
 .dc-tag:hover {
-    border-color: #2e2e2e;
+    border-color: #333;
+    color: #aaa;
 }
 
 .dc-tag--sel {
@@ -292,8 +252,8 @@
 }
 
 .dc-tag-count {
-    font-size: 14px;
-    color: #2e2e2e;
+    font-size: 11px;
+    color: #444;
     margin-top: 8px;
 }
 
@@ -301,14 +261,14 @@
 .dc-check-group {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
 }
 
 .dc-check-opt {
     display: flex;
     align-items: center;
     gap: 9px;
-    padding: 8px 12px;
+    padding: 7px 11px;
     border: 1px solid #1e1e1e;
     border-radius: 7px;
     cursor: pointer;
@@ -316,7 +276,7 @@
 }
 
 .dc-check-opt:hover {
-    border-color: #2e2e2e;
+    border-color: #333;
 }
 
 .dc-check-opt--sel {
@@ -328,7 +288,7 @@
     width: 13px;
     height: 13px;
     border-radius: 3px;
-    border: 1.5px solid #2a2a2a;
+    border: 1.5px solid #333;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -344,8 +304,8 @@
 }
 
 .dc-check-text {
-    font-size: 14px;
-    color: #4a4a4a;
+    font-size: 13px;
+    color: #555;
 }
 
 .dc-check-opt--sel .dc-check-text {
@@ -354,37 +314,38 @@
 
 /* SAVE BAR */
 .dc-save-bar {
-    margin-top: 20px;
-    padding: 15px 20px;
+    padding: 13px 18px;
     background: #0f0f0f;
     border: 1px solid #1a1a1a;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
 }
 
 .dc-save-info {
     font-size: 11px;
-    color: #2a2a2a;
+    color: #444;
 }
 
 .dc-save-info span {
-    color: #444;
+    color: #333;
 }
 
 .dc-save-actions {
     display: flex;
     gap: 8px;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .dc-btn-discard {
     background: none;
     border: 1px solid #1e1e1e;
-    color: #4a4a4a;
+    color: #444;
     border-radius: 7px;
-    padding: 8px 16px;
+    padding: 7px 14px;
     font-size: 12px;
     cursor: pointer;
     font-family: inherit;
@@ -392,22 +353,22 @@
 }
 
 .dc-btn-discard:hover {
-    border-color: #2e2e2e;
-    color: #888;
+    border-color: #333;
+    color: #777;
 }
 
 .dc-btn-save {
     background: #1a1a1a;
-    color: #ded9d9;
+    color: #444;
     border: none;
     border-radius: 7px;
-    padding: 9px 22px;
-    font-size: 13px;
+    padding: 8px 20px;
+    font-size: 12px;
     font-weight: 500;
     cursor: default;
     font-family: inherit;
     transition: all .2s;
-    min-width: 148px;
+    min-width: 140px;
     text-align: center;
 }
 
@@ -432,14 +393,14 @@
     right: 28px;
     z-index: 999;
     background: #161616;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #222;
     border-radius: 9px;
-    padding: 11px 18px;
+    padding: 10px 16px;
     display: flex;
     align-items: center;
     gap: 9px;
-    font-size: 13px;
-    color: #ccc;
+    font-size: 12px;
+    color: #aaa;
     transform: translateY(80px);
     opacity: 0;
     transition: all .3s ease;
@@ -451,8 +412,8 @@
 }
 
 .dc-toast-dot {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: #27ae60;
     flex-shrink: 0;
@@ -460,4 +421,66 @@
 
 .dc-toast-dot--warn {
     background: #e67e22;
+}
+
+/* EMBEDDED (dentro do Perfil) */
+.dc-wrap--embedded {
+    background: transparent;
+    min-height: unset;
+}
+
+.dc-wrap--embedded .dc-page {
+    padding: 16px 16px 24px;
+    max-width: 100%;
+}
+
+/* ── RESPONSIVO ── */
+
+/* Tablet: 2 colunas */
+@media (max-width: 900px) {
+    .dc-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dc-section--perfil {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+
+    .dc-section--ciclo,
+    .dc-section--exames,
+    .dc-section--condicoes {
+        grid-column: span 1;
+    }
+}
+
+/* Mobile: 1 coluna */
+@media (max-width: 540px) {
+    .dc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dc-section--perfil,
+    .dc-section--ciclo,
+    .dc-section--compostos,
+    .dc-section--exames,
+    .dc-section--condicoes {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .dc-row2 {
+        grid-template-columns: 1fr;
+    }
+
+    .dc-save-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .dc-save-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
 }

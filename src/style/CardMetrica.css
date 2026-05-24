@@ -7,7 +7,7 @@
 
 .metric-label {
     font-size: 10px;
-    color: #3a3a3a;
+    color: #ded9d9;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-bottom: 8px;
@@ -23,7 +23,7 @@
 .metric-unit {
     font-size: 12px;
     font-weight: 400;
-    color: #3a3a3a;
+    color: #ded9d9;
 }
 
 .metric-delta {
@@ -31,5 +31,10 @@
     margin-top: 5px;
 }
 
-.delta-danger { color: #c0392b; }
-.delta-ok { color: #27ae60; }
+.delta-danger {
+    color: #c0392b;
+}
+
+.delta-ok {
+    color: #27ae60;
+}

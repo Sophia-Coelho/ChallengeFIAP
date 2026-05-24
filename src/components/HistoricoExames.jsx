@@ -1,8 +1,7 @@
 import { useState, useRef } from 'react'
-import Topbar from '../components/perfilDoUsuario/Topbar'
 import '../style/historicoExames.css'
 
-/* ─── Mock data ─── */
+/* Mock */
 const INITIAL_EXAMS = [
     {
         id: 1,
@@ -45,7 +44,7 @@ const RISK_LABELS = {
     processing: 'Processando…',
 }
 
-/* ─── Sub-components ─── */
+/* Sub-components */
 
 function RiskBadge({ risk }) {
     return (
@@ -87,8 +86,6 @@ function Toast({ msg, show, warn }) {
     )
 }
 
-/* ─── Main component ─── */
-
 export default function HistoricoExames() {
     const [exams, setExams] = useState(INITIAL_EXAMS)
     const [dragging, setDragging] = useState(false)
@@ -122,7 +119,6 @@ export default function HistoricoExames() {
         setExams(prev => [newExam, ...prev])
         showToast(`"${newExam.name}" importado com sucesso`)
 
-        // Simulate async processing
         setTimeout(() => {
             setExams(prev =>
                 prev.map(e => (e.id === newExam.id ? { ...e, risk: 'warn' } : e))
@@ -147,8 +143,6 @@ export default function HistoricoExames() {
 
     return (
         <div className="he-wrap">
-
-            <Topbar />
 
             {/* Page */}
             <div className="he-page">
@@ -180,7 +174,7 @@ export default function HistoricoExames() {
                     />
                 </div>
 
-                {/* Upload zone */}
+                {/* zona Upload */}
                 <div
                     className={`he-upload-zone${dragging ? ' he-upload-zone--dragging' : ''}`}
                     onClick={() => fileRef.current.click()}
@@ -189,7 +183,7 @@ export default function HistoricoExames() {
                     onDrop={handleDrop}
                 >
                     <div className="he-upload-icon">
-                        <svg viewBox="0 0 20 20" fill="none" stroke="#3a3a3a" strokeWidth="1.5">
+                        <svg viewBox="0 0 20 20" fill="none" stroke="#ded9d9" strokeWidth="1.5">
                             <path d="M10 13V7M7 10l3-3 3 3" />
                             <path d="M3 14v2a1 1 0 001 1h12a1 1 0 001-1v-2" />
                         </svg>
@@ -208,7 +202,7 @@ export default function HistoricoExames() {
                     />
                 </div>
 
-                {/* List */}
+                {/* Lista exames */}
                 <div className="he-section-title">Exames importados</div>
 
                 <div className="he-exam-list">

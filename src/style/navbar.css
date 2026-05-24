@@ -27,19 +27,12 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
+    width: 100px;
 }
 
 .logo-icon {
-    width: 25px;
-    height: 25px;
     display: flex;
     align-items: center;
-}
-
-.logo-text {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--cor-texto);
 }
 
 .menu_list {

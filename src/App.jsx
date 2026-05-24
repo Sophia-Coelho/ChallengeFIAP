@@ -9,7 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Perfil from './pages/Perfil'
 import Onboarding from './pages/Onboarding'
-import HistoricoExames from './pages/HistoricoExames'
+import HistoricoExames from './components/HistoricoExames'
 import DadosConta from './pages/DadosConta'
 
 import AccessibilityMenu from './components/Acessibilidade/AccessibilityMenu'
@@ -34,7 +34,6 @@ export default function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Perfil />} />
                 <Route path="/onboarding" element={<Onboarding />} />
-                <Route path="/historico" element={<HistoricoExames />} />
                 <Route path="/conta" element={<DadosConta />} />
             </Routes>
 

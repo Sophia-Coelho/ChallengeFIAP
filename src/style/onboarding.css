@@ -72,7 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     flex-shrink: 0;
     margin-top: 1px;
@@ -92,12 +92,12 @@
 
 .ob-step-num.pending {
     background: #141414;
-    color: #2e2e2e;
+    color: #ded9d9;
     border: 1px solid #1e1e1e;
 }
 
 .ob-step-label {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 500;
     color: #4a4a4a;
 }
@@ -111,8 +111,8 @@
 }
 
 .ob-step-desc {
-    font-size: 10px;
-    color: #2e2e2e;
+    font-size: 12px;
+    color: #7b7979;
     margin-top: 2px;
 }
 
@@ -169,7 +169,7 @@
 
 .ob-sub {
     font-size: 13px;
-    color: #3a3a3a;
+    color: #fff;
     margin-bottom: 32px;
     line-height: 1.6;
 }
@@ -181,7 +181,7 @@
 .ob-field label {
     display: block;
     font-size: 11px;
-    color: #3a3a3a;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: .07em;
     margin-bottom: 7px;
@@ -209,7 +209,7 @@
 }
 
 .ob-field input::placeholder {
-    color: #2e2e2e;
+    color: #4a4a4a;
 }
 
 .ob-row {
@@ -236,7 +236,7 @@
 }
 
 .ob-radio-opt:hover {
-    border-color: #2e2e2e;
+    border-color: #ded9d9;
 }
 
 .ob-radio-opt.selected {
@@ -248,7 +248,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    border: 1.5px solid #2a2a2a;
+    border: 1.5px solid #ded9d9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,7 +287,7 @@
     border-radius: 6px;
     border: 1px solid #1e1e1e;
     background: #111;
-    color: #3a3a3a;
+    color: #ded9d9;
     font-size: 11px;
     cursor: pointer;
     transition: all .15s;
@@ -325,7 +325,7 @@
     width: 14px;
     height: 14px;
     border-radius: 3px;
-    border: 1.5px solid #2a2a2a;
+    border: 1.5px solid #ded9d9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -376,7 +376,7 @@
 .ob-btn-back {
     background: none;
     border: none;
-    color: #3a3a3a;
+    color: #ded9d9;
     font-size: 13px;
     cursor: pointer;
     font-family: inherit;
