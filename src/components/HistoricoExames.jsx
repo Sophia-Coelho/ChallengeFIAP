@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import '../style/historicoExames.css'
 
-/* ─── Mock data ─── */
+/* Mock */
 const INITIAL_EXAMS = [
     {
         id: 1,
@@ -44,7 +44,7 @@ const RISK_LABELS = {
     processing: 'Processando…',
 }
 
-/* ─── Sub-components ─── */
+/* Sub-components */
 
 function RiskBadge({ risk }) {
     return (
@@ -86,8 +86,6 @@ function Toast({ msg, show, warn }) {
     )
 }
 
-/* ─── Main component ─── */
-
 export default function HistoricoExames() {
     const [exams, setExams] = useState(INITIAL_EXAMS)
     const [dragging, setDragging] = useState(false)
@@ -121,7 +119,6 @@ export default function HistoricoExames() {
         setExams(prev => [newExam, ...prev])
         showToast(`"${newExam.name}" importado com sucesso`)
 
-        // Simulate async processing
         setTimeout(() => {
             setExams(prev =>
                 prev.map(e => (e.id === newExam.id ? { ...e, risk: 'warn' } : e))
@@ -177,7 +174,7 @@ export default function HistoricoExames() {
                     />
                 </div>
 
-                {/* Upload zone */}
+                {/* zona Upload */}
                 <div
                     className={`he-upload-zone${dragging ? ' he-upload-zone--dragging' : ''}`}
                     onClick={() => fileRef.current.click()}
@@ -205,7 +202,7 @@ export default function HistoricoExames() {
                     />
                 </div>
 
-                {/* List */}
+                {/* Lista exames */}
                 <div className="he-section-title">Exames importados</div>
 
                 <div className="he-exam-list">
