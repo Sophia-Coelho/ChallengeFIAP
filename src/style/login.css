@@ -107,3 +107,23 @@
     .btn_voltar:hover { background: #1a1a1a; color: #fff; }
     .divider::before, .divider::after { background: #2a2a2a; }
 }
+
+.link_button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #c0392b;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+.link_button:hover {
+    text-decoration: underline;
+}
+button.btn_voltar {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}

@@ -17,7 +17,6 @@ export default function Navbar() {
                     <li><a href="#painel">Painel</a></li>
                     <li><a href="#mapa-corporal">Mapa Corporal</a></li>
                     <li><a href="#simulador">Simulador</a></li>
-                    <li><a href="#insights">Insights</a></li>
                     <li><Link className="btn-login" to="/login">Login</Link></li>
                 </ul>
                 <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -28,7 +27,6 @@ export default function Navbar() {
                 <a href="#painel">Painel</a>
                 <a href="#mapa-corporal">Mapa Corporal</a>
                 <a href="#simulador">Simulador</a>
-                <a href="#insights">Insights</a>
                 <a className="btn-login" href="/login">Login</a>
             </div>
         </>
