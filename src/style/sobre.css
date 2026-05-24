@@ -1,0 +1,13 @@
+.sobre-pagina {
+  --bg-primary: #1b1b1b;
+  --bg-surface: #000000;
+  --color-primary: #E24B4A;
+  --color-danger: #732727;
+  --color-text: #FFFFFF;
+  --color-muted: #B3B3B3;
+
+  background: var(--bg-primary);
+  color: var(--color-text);
+
+  min-height: 100vh;
+}
