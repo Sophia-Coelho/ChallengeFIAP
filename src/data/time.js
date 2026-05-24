@@ -1,41 +1,40 @@
 const timeData = [
   {
-    nome: "Jefferson Gomes",
-    titulo: "Pesquisa Científica",
+    nome: "Jefferson",
+    titulo: "Pesquisa e Conteúdo",
     descricao:
-      "Responsável pela pesquisa científica, validação médica e organização dos dados de saúde.",
+      "Responsável pela pesquisa científica e criação de conteúdos informativos do projeto.",
     img: "/Jefferson.png"
   },
 
   {
     nome: "Natalia",
-    titulo: "Frontend UI/UX",
+    titulo: "Frontend e UI/UX",
     descricao:
-      "Responsável pela construção visual e experiência do usuário.",
+      "Responsável pelo desenvolvimento visual das páginas, componentes e experiência do usuário da plataforma.",
     img: "/Nat.jpg"
   },
 
     {
     nome: "Sophia",
-    titulo: "X",
+    titulo: "Dashboard e Gráficos",
     descricao:
-      "Responsável pela o.",
+      "Responsável pela criação dos dashboards, gráficos interativos e visualização dos dados de saúde.",
     img: "/Sophia.jpg"
   },
 
     {
     nome: "Gabriel",
-    titulo: "F",
-    descricao:
-      "Responsável pela.",
+    titulo: "Lógica de Negócio",
+    descricao:"Responsável pelos cálculos, análises de risco e regras que processam os dados de saúde do sistema.",
     img: "/Gabi.jpg"
   },
 
   {
     nome: "André",
-    titulo: "F",
+    titulo: "Desenvolvimento Criativo e Pitch",
     descricao:
-      "Responsável pela.",
+      "Responsável pelo apoio criativo do projeto, construção do pitch e apresentação da proposta.",
     img: "/André.png"
   }
 ];
