@@ -29,6 +29,14 @@ const timeData = [
     descricao:
       "Responsável pela.",
     img: "/Gabi.jpg"
+  },
+
+  {
+    nome: "André",
+    titulo: "F",
+    descricao:
+      "Responsável pela.",
+    img: "/André.png"
   }
 ];
 
