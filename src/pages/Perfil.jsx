@@ -6,7 +6,7 @@ import CardAlertasExamesInsights from '../components/perfilDoUsuario/CardAlertas
 import { MOCK_DATA } from '../data/mockData'
 import '../style/perfil.css'
 import HistoricoExames from '../components/HistoricoExames'
-import DadosDaConta from '../pages/DadosConta'
+import DadosDaConta from '../components/DadosConta'
 
 function carregarDadosConta() {
     const dados = localStorage.getItem('dadosContaCicloRisco')

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Topbar from '../components/Topbar'
+import Topbar from './Topbar'
 import '../style/dadosDaConta.css'
 
 const COMPOSTOS = [

@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <>
             <nav className="navbar">
-                <a className="logo" href="#">
+                <a className="logo" href="/">
                     <img src={logoIcon} alt="Logo" className="logo-icon" />
                 </a>
                 <ul className="menu_list">
