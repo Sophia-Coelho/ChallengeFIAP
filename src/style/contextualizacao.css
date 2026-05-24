@@ -1,0 +1,30 @@
+.contextualizacao {
+  background: var(--bg-primary);
+
+  color: var(--color-text);
+
+  margin-top: 50px;
+  margin-bottom: -50px;
+}
+
+.contextualizacao h2 {
+  font-size: 3rem;
+
+  font-weight: 700;
+
+  margin-bottom: 24px;
+
+  color: var(--color-primary);
+}
+
+.contextualizacao p {
+  color: var(--color-muted);
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+  max-width: 800px;
+
+  margin: 0 auto;
+}

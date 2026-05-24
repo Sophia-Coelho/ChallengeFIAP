@@ -1,0 +1,46 @@
+.tech-grid {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  justify-content: center;  
+}
+
+.stacks-section{
+  padding-bottom: 4rem;
+}
+
+.tech-description {
+  color: var(--color-muted);
+
+  max-width: 700px;
+
+  margin: 0 auto 40px auto ;
+  margin-top: -22px;
+}
+
+.tech-badge {
+  background: rgba(226, 75, 74, 0.1);
+
+  border: 1px solid rgba(226, 75, 74, 0.3);
+
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  color: var(--color-primary);
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.tech-badge:hover {
+  transform: translateY(-3px);
+
+  background: rgba(226, 75, 74, 0.2);
+
+  border-color: var(--color-primary);
+}
