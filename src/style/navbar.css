@@ -88,18 +88,42 @@
     height: 2px;
     background: var(--cor-texto-suave);
     border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+}
+
+/* Animação do X ao abrir */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobile-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 64px;          /* altura exata da navbar */
+    left: 0;
+    width: 100%;
+    z-index: 99;
     background: var(--cor-escuro-fundo);
     border-bottom: 1px solid var(--cor-borda);
     padding: 0.5rem 1.5rem 1rem;
+
+    /* Animação com max-height */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
 }
 
 .mobile-menu.open {
-    display: flex;
+    max-height: 300px;
+    opacity: 1;
 }
 
 .mobile-menu a {

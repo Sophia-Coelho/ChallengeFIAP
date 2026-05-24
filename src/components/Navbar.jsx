@@ -17,7 +17,10 @@ export default function Navbar() {
                     <li><a href="/sobre">Sobre o Projeto</a></li>
                     <li><Link className="btn-login" to="/login">Login</Link></li>
                 </ul>
-                <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                <div
+                    className={`hamburger ${menuOpen ? 'open' : ''}`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
                     <span /><span /><span />
                 </div>
             </nav>
