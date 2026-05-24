@@ -5,8 +5,8 @@
     rgba(18, 18, 18, 1)
   );
 
-  padding: 2rem;
-
+  padding: 1.5rem 1rem;
+  
   border-radius: 24px;
 
   border: 1px solid rgba(226, 75, 74, 0.5);
@@ -18,29 +18,28 @@
 
   height: 100%;
 
+  overflow: hidden;
+
   text-align: center;
 }
 
 
 
 .membro-img-wrapper {
-  width: 120px;
-  height: 120px;
+  width: 72px;
+  height: 72px;
 
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 1rem;
 
   border-radius: 50%;
 
-  padding: 4px;
+  padding: 3px;
 
   background: linear-gradient(
     135deg,
-    rgba(226, 75, 74, 0.9),
-    rgba(115, 39, 39, 0.7)
+    rgba(226,75,74,0.95),
+    rgba(115,39,39,0.7)
   );
-
-  box-shadow:
-    0 0 20px rgba(226, 75, 74, 0.15);
 
   display: flex;
 
@@ -58,16 +57,18 @@
   object-fit: cover;
 
   display: block;
-
-  background: #111;
 }
 
 .card-membro h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 
   font-weight: 700;
 
-  margin-bottom: 0.5rem;
+  line-height: 1.3;
+
+  margin-bottom: 0.35rem;
+
+  color: white;
 }
 
 .membro-descricao {
@@ -75,17 +76,27 @@
 
   color: var(--color-primary);
 
+  font-size: 0.9rem;
+
   font-weight: 600;
 
-  margin-bottom: 1rem;
-
-  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
 }
 
 .card-membro p {
   color: var(--color-muted);
 
-  line-height: 1.7;
+  font-size: 0.85rem;
 
-  font-size: 0.95rem;
+  line-height: 1.5;
+
+  margin-bottom: 0;
+}
+
+.descricao-limitada {
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
 }
