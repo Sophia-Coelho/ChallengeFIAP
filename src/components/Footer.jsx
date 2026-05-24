@@ -49,7 +49,7 @@ export default function Footer() {
                     <ul>
                         <li><a href="/">Menu</a></li>
                         <li><a href="/sobre">Sobre o Projeto</a></li>
-                        <li><a href="/login">Login</a></li>
+                        <li><a href="/login">Entrar</a></li>
                     </ul>
                 </div>
 
