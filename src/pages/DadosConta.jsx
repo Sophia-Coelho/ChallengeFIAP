@@ -24,6 +24,7 @@ const INITIAL = {
     dosagem: '',
     tempoUso: '',
     fezeExames: 'recentes',
+    dataUltimoExame: '',
     condicoes: [],
     ultimaAtualizacao: '',
 }
@@ -381,6 +382,17 @@ export default function DadosDaConta() {
                                 ]}
                             />
                         </div>
+
+                        {form.fezeExames !== 'nunca' && (
+                            <div className="dc-field">
+                                <label>Data do último exame</label>
+                                <input
+                                    type="date"
+                                    value={form.dataUltimoExame}
+                                    onChange={e => update('dataUltimoExame', e.target.value)}
+                                />
+                            </div>
+                        )}
                     </div>
 
                     <div className="dc-section">

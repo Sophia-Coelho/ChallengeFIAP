@@ -28,6 +28,7 @@ export default function Onboarding() {
         dosagem: '',
         tempoUso: '',
         fezeExames: 'recentes',
+        dataUltimoExame: '',
         condicoes: [],
     })
 
@@ -55,6 +56,7 @@ export default function Onboarding() {
             dosagem: form.dosagem,
             tempoUso: form.tempoUso,
             fezeExames: form.fezeExames,
+            dataUltimoExame: form.dataUltimoExame,
             condicoes: form.condicoes,
             ultimaAtualizacao: new Date().toLocaleDateString('pt-BR', {
                 day: '2-digit',
@@ -119,7 +121,6 @@ export default function Onboarding() {
                         <div className="ob-progress-bar" style={{ width: progressos[etapa] }} />
                     </div>
 
-                    {/* ETAPA 1 */}
                     {etapa === 1 && (
                         <div>
                             <div className="ob-tag">Etapa 1 de 3</div>
@@ -138,6 +139,7 @@ export default function Onboarding() {
                                         onChange={e => update('nome', e.target.value)}
                                     />
                                 </div>
+
                                 <div className="ob-field">
                                     <label>Sobrenome</label>
                                     <input
@@ -159,6 +161,7 @@ export default function Onboarding() {
                                         onChange={e => update('idade', e.target.value)}
                                     />
                                 </div>
+
                                 <div className="ob-field">
                                     <label>Sexo biológico</label>
                                     <select
@@ -182,6 +185,7 @@ export default function Onboarding() {
                                         onChange={e => update('peso', e.target.value)}
                                     />
                                 </div>
+
                                 <div className="ob-field">
                                     <label>Altura (cm)</label>
                                     <input
@@ -202,7 +206,6 @@ export default function Onboarding() {
                         </div>
                     )}
 
-                    {/* ETAPA 2 */}
                     {etapa === 2 && (
                         <div>
                             <div className="ob-tag">Etapa 2 de 3</div>
@@ -213,6 +216,7 @@ export default function Onboarding() {
 
                             <div className="ob-field">
                                 <label>Está em ciclo atualmente?</label>
+
                                 <div className="ob-radio-group">
                                     {[
                                         { val: 'sim', label: 'Sim, estou em ciclo ativo' },
@@ -237,6 +241,7 @@ export default function Onboarding() {
                                 <>
                                     <div className="ob-field">
                                         <label>Compostos utilizados</label>
+
                                         <div className="ob-tags">
                                             {COMPOSTOS.map(c => (
                                                 <div
@@ -260,6 +265,7 @@ export default function Onboarding() {
                                                 onChange={e => update('dosagem', e.target.value)}
                                             />
                                         </div>
+
                                         <div className="ob-field">
                                             <label>Tempo de uso</label>
                                             <select
@@ -281,6 +287,7 @@ export default function Onboarding() {
                                 <button className="ob-btn-back" onClick={() => setEtapa(1)}>
                                     ← Voltar
                                 </button>
+
                                 <button className="ob-btn-next" onClick={() => setEtapa(3)}>
                                     Continuar →
                                 </button>
@@ -288,7 +295,6 @@ export default function Onboarding() {
                         </div>
                     )}
 
-                    {/* ETAPA 3 */}
                     {etapa === 3 && (
                         <div>
                             <div className="ob-tag">Etapa 3 de 3</div>
@@ -299,6 +305,7 @@ export default function Onboarding() {
 
                             <div className="ob-field">
                                 <label>Já fez exames laboratoriais?</label>
+
                                 <div className="ob-radio-group">
                                     {[
                                         { val: 'recentes', label: 'Sim, tenho exames recentes (menos de 6 meses)' },
@@ -319,8 +326,20 @@ export default function Onboarding() {
                                 </div>
                             </div>
 
+                            {form.fezeExames !== 'nunca' && (
+                                <div className="ob-field">
+                                    <label>Data do último exame</label>
+                                    <input
+                                        type="date"
+                                        value={form.dataUltimoExame}
+                                        onChange={e => update('dataUltimoExame', e.target.value)}
+                                    />
+                                </div>
+                            )}
+
                             <div className="ob-field">
                                 <label>Condições pré-existentes</label>
+
                                 <div className="ob-check-group">
                                     {CONDICOES.map(c => (
                                         <div
@@ -341,6 +360,7 @@ export default function Onboarding() {
                                 <button className="ob-btn-back" onClick={() => setEtapa(2)}>
                                     ← Voltar
                                 </button>
+
                                 <button className="ob-btn-next" onClick={finalizarOnboarding}>
                                     Acessar dashboard →
                                 </button>
