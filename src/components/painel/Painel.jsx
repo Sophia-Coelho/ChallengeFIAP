@@ -34,56 +34,51 @@ export default function Painel() {
   };
 
   const novosCardsInformacao = [
-    {
-      titulo: "Baixa mortalidade direta, alto risco indireto",
-      descricao:
-        "As mortes relacionadas a esteroides são subnotificadas. A maioria dos óbitos decorre de eventos cardiovasculares, não de toxicidade aguda.",
-    },
-    {
-      titulo: "Jovens enfrentam riscos a longo prazo",
-      descricao:
-        "Usuários de 20 a 29 anos apresentam as maiores taxas de uso e o aumento mais acentuado de eventos cardíacos em uma década.",
-    },
-    {
-      titulo: "A dependência psicológica é real",
-      descricao:
-        "30% dos usuários de longo prazo desenvolvem dismorfia corporal e dependência psicológica, dificultando a interrupção do uso.",
-    },
-    {
-      titulo: "Prevenção pela educação",
-      descricao:
-        "Estudos mostram que a educação baseada em dados reduz o primeiro uso em até 40% em grupos de risco.",
-    },
+   
   ];
 
   const cardsGraph = [
     {
-      titulo: "Perigo para o Coração",
+      titulo: "Saúde sexual ineficaz",
+      descricao:
+        "O uso de anabolizantes pode “desligar” a produção natural de testosterona, causando infertilidade, impotência sexual e atrofia testicular.",      
+      fonteNome: "Sociedade Brasileira de Urologia",
+      link: "https://portaldaurologia.org.br/sua-saude/dicas/riscos-urologicos-do-uso-de-anabolizantes",
+    },
+    {
+      titulo: "Ruptura muscular",
+      descricao:
+        "Risco de ruptura dos tendões chega a ser 9x maior pq os tendões que os prende às articulações não os acompanha a hipertrofia dos músculos",
+      fonteNome: "Sociedade Brasileira de Endocrinologia e Metabologia",
+      link: "https://s3.endocrino.org.br/bomba-to-fora-e-book-SBEM.pdf",
+    },
+    {
+      titulo: "Perigo para o coração",
       descricao:
         "Infarto: Usuários têm 3× mais risco de sofrer um ataque cardíaco.\nCardiomiopatia: O risco de desenvolver danos graves na musculatura do coração é quase 9× maior.",
       fonteNome: "Associação Americana do Coração, revista Circulation",
-      link: "https://www.ahajournals.org/journal/circ",
+      link: "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.124.071117",
     },
     {
-      titulo: "Um Problema em Crescimento",
+      titulo: "Um Problema em crescimento",
       descricao:
         "Estima-se que 3,3% da população geral faça uso dessas substâncias (6,4% dos homens e 1,6% das mulheres).\nO uso chega a 13,4% entre atletas e a impressionantes 18,4% entre praticantes de atividade física.",
       fonteNome: "Sociedade Brasileira de Endocrinologia e Metabologia",
-      link: "https://www.endocrino.org.br/",
+      link: "https://www.endocrino.org.br/wp-content/uploads/2022/09/Posicionamento-da-SBEM-Anabolizantes.docx.pdf",
     },
     {
-      titulo: "Comportamento de Risco",
+      titulo: "Comportamento de risco",
       descricao:
         "O uso de esteroides está fortemente associado ao abuso de outras substâncias. Quem consome anabolizantes tem uma frequência muito maior de dependência de álcool, nicotina e cocaína.",
       fonteNome: "Sociedade Brasileira de Endocrinologia e Metabologia",
-      link: "https://www.endocrino.org.br/",
+      link: "https://www.endocrino.org.br/wp-content/uploads/2022/09/Posicionamento-da-SBEM-Anabolizantes.docx.pdf",
     },
     {
-      titulo: "Efeitos Irreversíveis em Mulheres",
+      titulo: "Efeitos irreversíveis em mulheres",
       descricao:
         "Marcas da masculinização podem ser permanentes: engrossamento definitivo da voz, hipertrofia do clitóris e crescimento de pelos faciais.\nAumento da resistência à insulina e risco de ruptura dos tendões chega a ser 9× maior.",
-      fonteNome: "Scielo, 2014 e SBEM, 2022",
-      link: "https://www.scielo.br/",
+      fonteNome: "Scielo, 2014",
+      link: "https://www.scielo.br/j/refuem/a/Yp3sBLmsrV7phpZMtsbmCpj/?format=html&lang=pt"
     },
   ];
 
