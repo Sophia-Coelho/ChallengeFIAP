@@ -399,3 +399,29 @@
         padding: 32px 24px;
     }
 }
+
+.ob-field-error input,
+.ob-field-error select {
+    border-color: #c0392b !important;
+    box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.25);
+}
+
+.ob-field-error label {
+    color: #ff8a7a;
+}
+
+.ob-error-text {
+    display: block;
+    margin-top: 7px;
+    color: #ff8a7a;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ob-field-error .ob-tags,
+.ob-field-error .ob-check-group,
+.ob-field-error .ob-radio-group {
+    border: 1px solid rgba(192, 57, 43, 0.45);
+    border-radius: 14px;
+    padding: 10px;
+}
