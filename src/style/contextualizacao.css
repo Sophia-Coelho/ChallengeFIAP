@@ -1,30 +1,22 @@
 .contextualizacao {
   background: var(--bg-primary);
-
   color: var(--color-text);
-
   margin-top: 50px;
   margin-bottom: -50px;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
 }
 
 .contextualizacao h2 {
-  font-size: 3rem;
-
+  font-size: clamp(1.6rem, 5vw, 3rem);
   font-weight: 700;
-
   margin-bottom: 24px;
-
   color: var(--color-primary);
 }
 
 .contextualizacao p {
   color: var(--color-muted);
-
-  font-size: 1.1rem;
-
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   line-height: 1.8;
-
   max-width: 800px;
-
   margin: 0 auto;
 }
