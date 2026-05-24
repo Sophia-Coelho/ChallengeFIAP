@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../style/navbar.css'
 import { Link } from 'react-router-dom'
-import logoIcon from '../assets/favicon.png'
+import logoIcon from '../assets/logo-nome.png'
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -11,7 +11,6 @@ export default function Navbar() {
             <nav className="navbar">
                 <a className="logo" href="#">
                     <img src={logoIcon} alt="Logo" className="logo-icon" />
-                    <span className="logo-text">Juicers</span>
                 </a>
                 <ul className="menu_list">
                     <li><a href="#painel">Menu</a></li>
