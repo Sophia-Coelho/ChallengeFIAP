@@ -82,7 +82,7 @@
 }
 
 .scroll_cards_painel::-webkit-scrollbar-track {
-    background: #ded9d9;
+    background: #3a3a3a;
     border-radius: 4px;
 }
 
@@ -96,7 +96,7 @@
 ========================================= */
 
 .card_info {
-    background-color: #ded9d9;
+    background-color: #3a3a3a;
     border-radius: 10px;
     border: 1px solid #ded9d9;
     border-left: 4px solid #dc3545;

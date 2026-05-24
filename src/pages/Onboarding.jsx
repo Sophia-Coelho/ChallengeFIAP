@@ -75,9 +75,9 @@ export default function Onboarding() {
             <div className="ob-left">
                 <div className="ob-logo">
                     <div className="ob-logo-mark">
-                        
+
                     </div>
-                    <span className="ob-logo-name">Ciclo de Risco</span>
+                    <span className="ob-logo-name">Juicers</span>
                 </div>
 
                 <div className="ob-steps">

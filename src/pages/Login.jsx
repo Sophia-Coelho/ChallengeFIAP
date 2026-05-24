@@ -83,7 +83,7 @@ export default function Login() {
             <div className="login_left">
                 <div className="login_logo">
                     <img src={logoIcon} alt="Logo" className="logo-icon" />
-                    <span className="login_logo_text">Ciclo de Risco</span>
+                    <span className="login_logo_text">Juicers</span>
                 </div>
 
                 <div className="login_left_middle">

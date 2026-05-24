@@ -11,7 +11,7 @@ export default function Navbar() {
             <nav className="navbar">
                 <a className="logo" href="#">
                     <img src={logoIcon} alt="Logo" className="logo-icon" />
-                    <span className="logo-text">Ciclo de Risco</span>
+                    <span className="logo-text">Juicers</span>
                 </a>
                 <ul className="menu_list">
                     <li><a href="#painel">Menu</a></li>

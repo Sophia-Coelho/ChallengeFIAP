@@ -9,7 +9,7 @@ export default function Topbar() {
         <div className="topbar">
             <div className="logo">
                 <img src={logoIcon} alt="Logo" className="logo-icon" />
-                <span className="logo-name">Ciclo de Risco</span>
+                <span className="logo-name">Juicers</span>
             </div>
 
             <div className="nav-right">
