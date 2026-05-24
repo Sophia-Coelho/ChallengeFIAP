@@ -10,7 +10,7 @@ function StacksUsadas() {
           Tecnologias Utilizadas
         </h2>
 
-        <p className="text-center tech-description">
+        <p className="tech-description">
           Tecnologias modernas utilizadas no desenvolvimento
           da plataforma e aplicadas ao longo do curso.
         </p>

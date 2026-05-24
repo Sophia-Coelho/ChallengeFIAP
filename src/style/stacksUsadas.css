@@ -13,12 +13,16 @@
 }
 
 .tech-description {
-  color: var(--color-muted);
+/* Permite centralizar e aplicar margens verticais */
+  display: block; 
   
-  max-width: 700px;
+  /* Centraliza o texto internamente */
+  text-align: center; 
+  
+  /* Cria o espaçamento de 40px abaixo do texto (em direção às badges) */
+  margin: -22px 254px 38px auto; 
 
-  margin: 0 auto 40px auto ;
-  margin-top: -22px;
+   white-space: nowrap; 
 }
 
 .tech-badge {
