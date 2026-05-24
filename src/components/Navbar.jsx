@@ -15,16 +15,19 @@ export default function Navbar() {
                 <ul className="menu_list">
                     <li><a href="/">Menu</a></li>
                     <li><a href="/sobre">Sobre o Projeto</a></li>
-                    <li><Link className="btn-login" to="/login">Login</Link></li>
+                    <li><Link className="btn-login" to="/login">Entrar</Link></li>
                 </ul>
-                <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                <div
+                    className={`hamburger ${menuOpen ? 'open' : ''}`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
                     <span /><span /><span />
                 </div>
             </nav>
             <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
                 <a href="/">Menu</a>
                 <a href="/sobre">Sobre o Projeto</a>
-                <a className="btn-login" href="/login">Login</a>
+                <a className="btn-login" href="/login">Entrar</a>
             </div>
         </>
     )
