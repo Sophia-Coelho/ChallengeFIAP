@@ -5,7 +5,7 @@
     min-height: 100vh;
     font-family: 'DM Sans', system-ui, sans-serif;
     color: #e2e2e2;
-    
+
 }
 
 /* TOP BAR */
@@ -195,7 +195,7 @@
 }
 
 .dc-field input::placeholder {
-    color: #2e2e2e;
+    color: #ded9d9;
 }
 
 .dc-row2 {
@@ -223,7 +223,7 @@
 }
 
 .dc-radio-opt:hover {
-    border-color: #2e2e2e;
+    border-color: #ded9d9;
 }
 
 .dc-radio-opt--sel {
@@ -235,7 +235,7 @@
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    border: 1.5px solid #2a2a2a;
+    border: 1.5px solid #ded9d9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -275,14 +275,14 @@
     border-radius: 5px;
     border: 1px solid #1e1e1e;
     background: #111;
-    color: #3a3a3a;
+    color: #ded9d9;
     font-size: 14px;
     cursor: pointer;
     transition: all .15s;
 }
 
 .dc-tag:hover {
-    border-color: #2e2e2e;
+    border-color: #ded9d9;
 }
 
 .dc-tag--sel {
@@ -293,7 +293,7 @@
 
 .dc-tag-count {
     font-size: 14px;
-    color: #2e2e2e;
+    color: #ded9d9;
     margin-top: 8px;
 }
 
@@ -316,7 +316,7 @@
 }
 
 .dc-check-opt:hover {
-    border-color: #2e2e2e;
+    border-color: #ded9d9;
 }
 
 .dc-check-opt--sel {
@@ -328,7 +328,7 @@
     width: 13px;
     height: 13px;
     border-radius: 3px;
-    border: 1.5px solid #2a2a2a;
+    border: 1.5px solid #ded9d9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -366,7 +366,7 @@
 
 .dc-save-info {
     font-size: 11px;
-    color: #2a2a2a;
+    color: #ded9d9;
 }
 
 .dc-save-info span {
@@ -392,7 +392,7 @@
 }
 
 .dc-btn-discard:hover {
-    border-color: #2e2e2e;
+    border-color: #ded9d9;
     color: #888;
 }
 
@@ -432,7 +432,7 @@
     right: 28px;
     z-index: 999;
     background: #161616;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #ded9d9;
     border-radius: 9px;
     padding: 11px 18px;
     display: flex;

@@ -21,10 +21,6 @@ export default function Perfil() {
                                 {perfil.idade} anos · Ciclo ativo há {perfil.tempoUso} · {perfil.dosagem}
                             </p>
                         </div>
-                        <div className="last-update">
-                            Último exame<br />
-                            <span>{perfil.ultimoExame}</span>
-                        </div>
                     </div>
 
                     <div className="metrics-row">

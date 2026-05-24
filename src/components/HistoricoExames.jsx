@@ -183,7 +183,7 @@ export default function HistoricoExames() {
                     onDrop={handleDrop}
                 >
                     <div className="he-upload-icon">
-                        <svg viewBox="0 0 20 20" fill="none" stroke="#3a3a3a" strokeWidth="1.5">
+                        <svg viewBox="0 0 20 20" fill="none" stroke="#ded9d9" strokeWidth="1.5">
                             <path d="M10 13V7M7 10l3-3 3 3" />
                             <path d="M3 14v2a1 1 0 001 1h12a1 1 0 001-1v-2" />
                         </svg>

@@ -75,10 +75,7 @@ export default function Onboarding() {
             <div className="ob-left">
                 <div className="ob-logo">
                     <div className="ob-logo-mark">
-                        <svg viewBox="0 0 12 12" fill="none">
-                            <path d="M6 1L9 4H7V8H5V4H3L6 1Z" fill="white" />
-                            <rect x="2" y="9" width="8" height="1.5" rx=".75" fill="white" opacity=".6" />
-                        </svg>
+                        
                     </div>
                     <span className="ob-logo-name">Ciclo de Risco</span>
                 </div>
