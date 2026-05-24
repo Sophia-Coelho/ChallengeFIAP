@@ -6,7 +6,7 @@ function StacksUsadas() {
 
       <div className="container">
 
-        <h2 className="section-title text-center mb-5">
+        <h2 className="section-title text-center mb-5 fw-bold">
           Tecnologias Utilizadas
         </h2>
 

@@ -20,7 +20,7 @@ function CardMembros({ membro }) {
           {membro.titulo}
         </span>
 
-        <p>
+        <p className="descricao-limitada">
           {membro.descricao}
         </p>
 
