@@ -230,7 +230,7 @@ export default function Onboarding() {
                     <div className="ob-logo-mark">
 
                     </div>
-                    <span className="ob-logo-name">Juicers</span>
+                    <span className="ob-logo-name">Juicer</span>
                 </div>
 
                 <div className="ob-steps">

@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="footer_brand">
                     <div className="footer_logo">
                         <span className="footer_logo_dot" />
-                        <span className="footer_logo_text">Juicers</span>
+                        <span className="footer_logo_text">Juicer</span>
                     </div>
                     <p className="footer_tagline">
                         Um projeto baseado em evidências científicas sobre o impacto dos esteroides anabolizantes.
@@ -67,7 +67,7 @@ export default function Footer() {
             </div>
 
             <div className="footer_bottom">
-                <p>© {new Date().getFullYear()} Juicers. Todos os direitos reservados.</p>
+                <p>© {new Date().getFullYear()} Juicer. Todos os direitos reservados.</p>
                 <p className="footer_disclaimer">
                     Este site é informativo e não substitui orientação médica profissional.
                 </p>
