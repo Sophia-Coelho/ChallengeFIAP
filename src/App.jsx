@@ -9,7 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Perfil from './pages/Perfil'
 import HistoricoExames from './components/HistoricoExames'
-import DadosConta from './pages/DadosConta'
+import DadosConta from './components/DadosConta'
 
 import AccessibilityMenu from './components/Acessibilidade/AccessibilityMenu'
 import LeitorDeAudio from './components/LeitorDeAudio/AudioReader'
