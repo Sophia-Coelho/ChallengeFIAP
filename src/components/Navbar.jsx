@@ -15,7 +15,7 @@ export default function Navbar() {
                 </a>
                 <ul className="menu_list">
                     <li><a href="#painel">Menu</a></li>
-                    <li><a href="#projeto">Sobre o Projeto</a></li>
+                    <li><a href="#sobre-pagina">Sobre o Projeto</a></li>
                     <li><Link className="btn-login" to="/login">Login</Link></li>
                 </ul>
                 <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -24,7 +24,7 @@ export default function Navbar() {
             </nav>
             <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
                 <a href="#painel">Menu</a>
-                <a href="#projeto">Sobre o Projeto</a>
+                <a href="#sobre-pagina">Sobre o Projeto</a>
                 <a className="btn-login" href="/login">Login</a>
             </div>
         </>

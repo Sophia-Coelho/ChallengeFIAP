@@ -34,7 +34,6 @@ export default function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Perfil />} />
                 <Route path="/onboarding" element={<Onboarding />} />
-                <Route path="/historico" element={<HistoricoExames />} />
                 <Route path="/conta" element={<DadosConta />} />
             </Routes>
 
