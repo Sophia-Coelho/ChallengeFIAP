@@ -1,32 +1,99 @@
 .card-membro {
-  background: var(--bg-surface);
+  background: linear-gradient(
+    145deg,
+    rgba(26, 26, 26, 1),
+    rgba(18, 18, 18, 1)
+  );
 
   padding: 2rem;
 
-  border-radius: 20px;
+  border-radius: 24px;
 
-  border: 1px solid #222;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 
-  transition: 0.3s;
+  transition: all 0.35s ease;
 
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  height: 100%;
+
+  text-align: center;
 }
 
 .card-membro:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
 
-  border-color: var(--color-primary);
+  border-color: rgba(226, 75, 74, 0.5);
 
   box-shadow:
-    0 0 30px rgba(226, 75, 74, 0.15);
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(226, 75, 74, 0.15);
+}
+
+.membro-img-wrapper {
+  width: 120px;
+  height: 120px;
+
+  margin: 0 auto 1.5rem auto;
+
+  border-radius: 50%;
+
+  padding: 4px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(226, 75, 74, 0.9),
+    rgba(115, 39, 39, 0.7)
+  );
+
+  box-shadow:
+    0 0 20px rgba(226, 75, 74, 0.15);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
 .membro-img {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
 
   border-radius: 50%;
 
   object-fit: cover;
 
+  display: block;
+
+  background: #111;
+}
+
+.card-membro h3 {
+  font-size: 1.4rem;
+
+  font-weight: 700;
+
+  margin-bottom: 0.5rem;
+}
+
+.membro-descricao {
+  display: block;
+
+  color: var(--color-primary);
+
+  font-weight: 600;
+
   margin-bottom: 1rem;
+
+  font-size: 0.95rem;
+}
+
+.card-membro p {
+  color: var(--color-muted);
+
+  line-height: 1.7;
+
+  font-size: 0.95rem;
 }

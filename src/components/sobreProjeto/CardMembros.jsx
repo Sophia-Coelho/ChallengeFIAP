@@ -4,11 +4,15 @@ function CardMembros({ membro }) {
 
       <div className="text-center">
 
-        <img
-          src={membro.img}
-          alt={membro.nome}
-          className="membro-img"
-        />
+        <div className="membro-img-wrapper">
+
+          <img
+            src={membro.img}
+            alt={membro.nome}
+            className="membro-img"
+          />
+
+        </div>
 
         <h3>{membro.nome}</h3>
 
