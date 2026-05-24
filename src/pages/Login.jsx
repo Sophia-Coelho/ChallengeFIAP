@@ -99,9 +99,9 @@ export default function Login() {
         <div className="login_wrap">
 
             <div className="login_left">
-                <div className="login_logo">
+                <a className="logo" href="/">
                     <img src={logoIcon} alt="Logo" className="logo-icon" />
-                </div>
+                </a>
 
                 <div className="login_left_middle">
                     <h1 className="login_left_headline">
