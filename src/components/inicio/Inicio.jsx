@@ -1,6 +1,6 @@
 import './inicio.css'
 import { Link } from 'react-router-dom'
-
+import fisioImg from '../../assets/fisio2_home_edited.png'
 
 export default function Inicio() {
     return (
@@ -31,8 +31,7 @@ export default function Inicio() {
             </div>
 
             <div className='image_container'>
-                <img src="../../../public/fisio2_home_edited.png" alt="homem e anabolizantes" />
-
+                <img src={fisioImg} alt="homem e anabolizantes" />
             </div>
 
         </section>

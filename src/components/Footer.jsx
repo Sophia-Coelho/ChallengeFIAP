@@ -48,7 +48,7 @@ export default function Footer() {
                     <p className="footer_nav_titulo">Navegação</p>
                     <ul>
                         <li><a href="/">Menu</a></li>
-                        <li><a href="/sobre">Sobre o Projeto</a></li>
+                        <li><a href="#sobre-pagina">Sobre o Projeto</a></li>
                         <li><a href="/login">Entrar</a></li>
                     </ul>
                 </div>
