@@ -1,19 +1,22 @@
-import Contextualizacao from "../components/sobreProjeto/Contextualizacao";
 import Time from "../components/sobreProjeto/Time"
 import StacksUsadas from "../components/sobreProjeto/StacksUsadas"
 
 import "../style/sobre.css";
 import "../style/cardMembros.css";
 import "../style/stacksUsadas.css"
-import "../style/contextualizacao.css"
+import TituloSubtitulo from "../components/TituloSubtitulo";
 
 export default function Sobre() {
     return (
-        <div className="sobre-pagina">
+        <div id="sobre-pagina" className="sobre-pagina">
 
-          <Contextualizacao />  
-          <Time />  
-          <StacksUsadas />
+            <TituloSubtitulo
+                titulo="Sobre o projeto"
+                subtitulo="O Juicer foi desenvolvido com o objetivo de conscientizar sobre os impactos do uso de esteroides anabolizantes através de visualizações interativas, dados científicos e análise de riscos à saúde."
+                variante="escuro"
+            />
+            <Time />
+            <StacksUsadas />
 
         </div>
     );

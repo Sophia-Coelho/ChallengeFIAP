@@ -251,7 +251,7 @@ export default function Simulador() {
           <div className="col-12 col-md-9 col-lg-7 col-xl-6">
             {/* Cabeçalho */}
             <h2 className="text-center text-white fw-bold mb-2">
-              Simulador de <span className="text-danger">Risco</span>
+              Simulador de Risco
             </h2>
             <p className="text-center text-secondary small mb-4">
               Estime seu perfil de risco com base no seu histórico de uso.
