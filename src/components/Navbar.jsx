@@ -14,7 +14,7 @@ export default function Navbar() {
                 </a>
                 <ul className="menu_list">
                     <li><a href="/">Menu</a></li>
-                    <li><a href="/sobre">Sobre o Projeto</a></li>
+                    <li><a href="#sobre-pagina">Sobre o Projeto</a></li>
                     <li><Link className="btn-login" to="/login">Entrar</Link></li>
                 </ul>
                 <div
@@ -26,7 +26,7 @@ export default function Navbar() {
             </nav>
             <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
                 <a href="/">Menu</a>
-                <a href="/sobre">Sobre o Projeto</a>
+                <a href="#sobre-pagina">Sobre o Projeto</a>
                 <a className="btn-login" href="/login">Entrar</a>
             </div>
         </>

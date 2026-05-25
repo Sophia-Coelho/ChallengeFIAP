@@ -34,14 +34,14 @@ export default function Painel() {
   };
 
   const novosCardsInformacao = [
-   
+
   ];
 
   const cardsGraph = [
     {
       titulo: "Saúde sexual ineficaz",
       descricao:
-        "O uso de anabolizantes pode “desligar” a produção natural de testosterona, causando infertilidade, impotência sexual e atrofia testicular.",      
+        "O uso de anabolizantes pode “desligar” a produção natural de testosterona, causando infertilidade, impotência sexual e atrofia testicular.",
       fonteNome: "Sociedade Brasileira de Urologia",
       link: "https://portaldaurologia.org.br/sua-saude/dicas/riscos-urologicos-do-uso-de-anabolizantes",
     },
@@ -92,31 +92,30 @@ export default function Painel() {
 
       <div className="secao_midia_dados">
 
-          {/* Vídeo */}
-          <div className="video_container_painel">
-            <iframe
-              src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI"
-              title="Vídeo Informativo sobre Anabolizantes"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+        <div className="video_container_painel">
+          <iframe
+            src="https://www.youtube.com/embed/qcFVGOuTeR0"
+            title="Vídeo Informativo sobre Anabolizantes"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
 
-          {/* Cards com scroll */}
-          <div className="scroll_cards_painel">
-            {novosCardsInformacao.map((card, i) => (
-              <CardInfo key={i} titulo={card.titulo} descricao={card.descricao} />
-            ))}
-            {cardsGraph.map((card, i) => (
-              <CardInfo
-                key={i + novosCardsInformacao.length}
-                titulo={card.titulo}
-                descricao={card.descricao}
-                fonteNome={card.fonteNome}
-                link={card.link}
-              />
-            ))}
-          </div>
+        {/* Cards com scroll */}
+        <div className="scroll_cards_painel">
+          {novosCardsInformacao.map((card, i) => (
+            <CardInfo key={i} titulo={card.titulo} descricao={card.descricao} />
+          ))}
+          {cardsGraph.map((card, i) => (
+            <CardInfo
+              key={i + novosCardsInformacao.length}
+              titulo={card.titulo}
+              descricao={card.descricao}
+              fonteNome={card.fonteNome}
+              link={card.link}
+            />
+          ))}
+        </div>
 
       </div>
     </section>
