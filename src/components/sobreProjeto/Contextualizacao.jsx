@@ -8,7 +8,7 @@ function Contextualizacao() {
 
           <div className="col-lg-8 text-center">
 
-            <h2>Sobre o Projeto</h2>
+            <h2>Sobre o projeto</h2>
 
             <p>
               O Juicer foi desenvolvido com o objetivo de

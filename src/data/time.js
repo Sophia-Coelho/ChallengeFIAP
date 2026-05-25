@@ -1,6 +1,6 @@
 const timeData = [
   {
-    nome: "Jefferson",
+    nome: "Jefferson Gomes",
     titulo: "Pesquisa e Conteúdo",
     descricao:
       "Responsável pela pesquisa científica e criação de conteúdos informativos do projeto.",
@@ -8,7 +8,7 @@ const timeData = [
   },
 
   {
-    nome: "Natalia",
+    nome: "Natalia Lugão",
     titulo: "Frontend e UI/UX",
     descricao:
       "Responsável pelo desenvolvimento visual das páginas, componentes e experiência do usuário da plataforma.",
@@ -16,7 +16,7 @@ const timeData = [
   },
 
     {
-    nome: "Sophia",
+    nome: "Sophia Coelho",
     titulo: "Dashboard e Gráficos",
     descricao:
       "Responsável pela criação dos dashboards, gráficos interativos e visualização dos dados de saúde.",
@@ -24,14 +24,14 @@ const timeData = [
   },
 
     {
-    nome: "Gabriel",
+    nome: "Gabriel Soares",
     titulo: "Lógica de Negócio",
     descricao:"Responsável pelos cálculos, análises de risco e regras que processam os dados de saúde do sistema.",
     img: "/Gabi.jpg"
   },
 
   {
-    nome: "André",
+    nome: "André Melo",
     titulo: "Desenvolvimento Criativo e Pitch",
     descricao:
       "Responsável pelo apoio criativo do projeto, construção do pitch e apresentação da proposta.",

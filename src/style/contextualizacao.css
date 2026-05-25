@@ -10,7 +10,7 @@
   font-size: clamp(1.6rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 24px;
-  color: var(--color-primary);
+  color: #ffffff;
 }
 
 .contextualizacao p {
